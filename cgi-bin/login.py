@@ -20,14 +20,16 @@ print "Content-type: text/html"
 print
 print "<html>"
 
-userID = cur.execute("select UserID from Users where Username = %s", uname)
-stored_password = cur.execute("select Password from Passwords where UserID = %s", userID)
-if password != stored_password:
+#retrieve correct password for user
+userID = cur.execute("select UserID from Users where Username=%s", username)
+cur.execute("select Pwd from Passwords where UserID=%s", userID)
+stored_password = str(cur.fetchone()[0])
+if password != stored_password: #error message
   print "<head><title>Wrong password!</title></head>"
   print "<body>"
   print "<h1>Sorry, that's the wrong password!</h1>"
   print "<p>Please go back and try again.</p>"
-else:
+else: #show login page
   print "<head><title>You have been logged in!</title></head>"
   print "<body>"
   print "<h1>You're now logged in, %s!</h1>" % (username)
