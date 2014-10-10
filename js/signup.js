@@ -41,7 +41,11 @@ var popInitialDayList = function (dayList) {
   var maxDays = 31;
   for (var i = 1; i <= maxDays; i++) {
     var newOpt = new Option();
-    newOpt.value = i;
+    if (i < 10) {
+      newOpt.value = "0" + i.toString();
+    } else {
+      newOpt.value = i;
+    }
     newOpt.text = i;
     dayList.options.add(newOpt);
   }
