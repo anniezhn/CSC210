@@ -1,30 +1,37 @@
 #!/usr/bin/python
 
-#TODO: Actually take this info that we have and add user to database
-# use cookies for persistent login
-
 import cgi
-import datetime
-
-# to facilitate debugging
+import MySQLdb as mdb
+import sys
 import cgitb
-cgitb.enable()
-
+cgitb.enable() #catch Python errors
 form = cgi.FieldStorage()
+
+#TODO: Use cookies for persistent login
+username = form['username'].value
+password = form['password'].value
+
+#connect Python and mySQL
+c = mdb.connect('localhost', 'tnichol1', 'TeamTAJ2!', 'tnichol1_CSC210');
+cur = c.cursor()
 
 print "Content-type: text/html"
 # don't forget the extra newline!
 print
-
 print "<html>"
-print "<head><title>Your account has been created!</title></head>"
+
+userID = cur.execute("select UserID from Users where Username = %s", uname)
+stored_password = cur.execute("select Password from Passwords where UserID = %s", userID)
+if password != stored_password:
+  print "<head><title>Wrong password!</title></head>"
+  print "<body>"
+  print "<h1>Sorry, that's the wrong password!</h1>"
+  print "<p>Please go back and try again.</p>"
+else:
+  print "<head><title>You have been logged in!</title></head>"
+  print "<body>"
+  print "<h1>You're now logged in, %s!</h1>" % (username)
+  print "<p>Enjoy the site!</p>"
 print "<body>"
-print "<h1>Welcome to our site, " + form['fname'].value + "</h1>"
-#print "<p>The time is: " + str(datetime.datetime.now()) + "</p>"
-print "<h2>Here is the information we have on record:</h2>"
-print "<p>Your username is: " + form['username'].value + "</p>"
-print "<p>Your password is: " + form['password'].value + "</p>"
-print "<p> Your birthday is: " + form['month'].value + " " + form['day'].value + " </p>"
-print "<p> Remember to log out when you're done with the website! </p>"
 print "</body>"
 print "</html>"
