@@ -21,7 +21,8 @@ print
 print "<html>"
 
 #retrieve correct password for user
-userID = cur.execute("select UserID from Users where Username=%s", username)
+cur.execute("select UserID from Users where Username=%s", username)
+userID = cur.fetchone()[0]
 cur.execute("select Pwd from Passwords where UserID=%s", userID)
 stored_password = str(cur.fetchone()[0])
 if password != stored_password: #error message
