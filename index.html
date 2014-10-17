@@ -1,106 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>TAJ&rsquo;s Webpage</title>
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script><script src="js/signup.js"></script>
+	<title>TAJ&#8217;s Webpage</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/signup.js"></script>
 	<link href="css/taj.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-<div id="mainContent">
-<h1>TAJ: Where kids can learn how to code!</h1>
+  <div id="mainContent">
+    <h1>TAJ: Where kids can learn how to code!</h1>
 
-<p>Welcome to Team TAJ&#39;s webpage!</p>
-<br />
-<img src="images/code.jpg" />
-<h2>Sign In</h2>
-
-<form action="cgi-bin/login.py" method="post">
-<div class="field"><label for="loginUsername">Username:</label> <input id="loginUsername" name="username" tabindex="1" type="text" /></div>
-
-<<<<<<< HEAD
-<div class="field"><label for="loginPassword">Password:</label> <input id="loginPassword" name="password" tabindex="2" type="text" /></div>
-=======
-		<h2>Sign In </h2>
-		<form method="post" action="cgi-bin/login.py">
-			<div class="field">
-				<label for="loginUsername">Username:</label>
-				<input name="username" id="loginUsername" type=text tabindex="1"/>
-			</div>
-			<div class="field">
-				<label for="loginPassword">Password:</label>
-				<input name="password" id="loginPassword" type=text tabindex="2"/>
-			</div>
-			<div>
-			  <input type="submit" tabindex="3"/> <input type="reset" tabindex="4"/>
-			</div>
-		</form>
->>>>>>> 7724972ef09323c0b43bf778d259efe4a2764646
-
-<div><input tabindex="3" type="submit" /> <input tabindex="4" type="reset" /></div>
-</form>
-&nbsp;
-
-<<<<<<< HEAD
-<h2>Sign Up</h2>
-=======
-		<h2>Sign Up</h2>
-		<form method="post" action="cgi-bin/account-create.py">
-			<div>
-				<label for="fname">First Name:</label>
-				<input type=text name="fname" id="fname" tabindex="5">
-			</div>
-			<div>
-				<label>Birthday:</label>
-				<select name="month" id="month" tabindex="6">
-					<option value="">Month</option>
-					<option value="01">Jan</option>
-					<option value="02">Feb</option>
-					<option value="03">Mar</option>
-					<option value="04">Apr</option>
-					<option value="05">May</option>
-					<option value="06">Jun</option>
-					<option value="07">Jul</option>
-					<option value="08">Aug</option>
-					<option value="09">Sep</option>
-					<option value="10">Oct</option>
-					<option value="11">Nov</option>
-					<option value="12">Dec</option>
-				</select>
-				<select name="day" id="day" tabindex="7">
-					<option value="">Day</option>
-				</select>
-				<select name="year" id="year" tabindex="8">
-					<option value="">Year</option>
-				</select>
-			</div>
-			<div>
-				Username:
-				<input type=text name="username" tabindex="9">
-			</div>
-			<div>
-				Password:
-				<input type=text name="password" tabindex="10">
-			</div>
-			<div>
-				<input type="submit" type=text tabindex="11"/><input type="reset" type=text tabindex="12">
-			</div>
-		</form>
-		<!-- Did not enclose in form-->
+    <p>Welcome to Team TAJ&#39;s webpage!</p>
+    <br />
+    <img src="images/code.jpg" />
+      <h2>Sign In </h2>
+      <form method="post" action="cgi-bin/login.py">
+	<div class="field">
+	  <label for="loginUsername">Username:</label>
+	  <input name="username" id="loginUsername" type=text tabindex="1"/>
 	</div>
->>>>>>> 7724972ef09323c0b43bf778d259efe4a2764646
-
-<form action="cgi-bin/account-create.py" method="post">
-<div><label for="fname">First Name:</label> <input id="fname" name="fname" tabindex="5" type="text" /></div>
-
-<div><label>Birthday:</label> <select id="month" name="month" tabindex="6"><option value="">Month</option><option value="01">Jan</option><option value="02">Feb</option><option value="03">Mar</option><option value="04">Apr</option><option value="05">May</option><option value="06">Jun</option><option value="07">Jul</option><option value="08">Aug</option><option value="09">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option> </select> <select id="day" name="day" tabindex="7"><option value="">Day</option> </select> <select id="year" name="year" tabindex="8"><option value="">Year</option> </select></div>
-
-<div>Username: <input name="username" tabindex="9" type="text" /></div>
-
-<div>Password: <input name="password" tabindex="10" type="text" /></div>
-
-<div><input tabindex="11" type="submit" /><input tabindex="12" type="reset" /></div>
+	<div class="field">
+	  <label for="loginPassword">Password:</label>
+	  <input name="password" id="loginPassword" type=text tabindex="2"/>
+	</div>
+	<div>
+	  <input type="submit" tabindex="3"/> <input type="reset" tabindex="4"/>
+	</div>
+      </form>
+      <div><input tabindex="3" type="submit" /> <input tabindex="4" type="reset" /></div>
+    </form>
+    
+<h2>Sign Up</h2>
+<form method="post" action="cgi-bin/account-create.py">
+  <div>
+    <label for="fname">First Name:</label>
+    <input type=text name="fname" id="fname" tabindex="5">
+  </div>
+  <div>
+    <label>Birthday:</label>
+    <select name="month" id="month" tabindex="6">
+      <option value="">Month</option>
+      <option value="01">Jan</option>
+      <option value="02">Feb</option>
+      <option value="03">Mar</option>
+      <option value="04">Apr</option>
+      <option value="05">May</option>
+      <option value="06">Jun</option>
+      <option value="07">Jul</option>
+      <option value="08">Aug</option>
+      <option value="09">Sep</option>
+      <option value="10">Oct</option>
+      <option value="11">Nov</option>
+      <option value="12">Dec</option>
+    </select>
+    <select name="day" id="day" tabindex="7">
+      <option value="">Day</option>
+    </select>
+    <select name="year" id="year" tabindex="8">
+      <option value="">Year</option>
+    </select>
+  </div>
+  <div>
+    Username:
+    <input type=text name="username" tabindex="9">
+  </div>
+  <div>
+    Password:
+    <input type=text name="password" tabindex="10">
+  </div>
+  <div>
+    <input type="submit" type=text tabindex="11"/><input type="reset" type=text tabindex="12">
+  </div>
 </form>
-<!-- Did not enclose in form--></div>
+<!-- Did not enclose in form-->
+</div>
+
 </body>
 </html>
