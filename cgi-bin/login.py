@@ -38,9 +38,9 @@ else: #show login page
 
   #go to the first lesson
   #maybe later on can continue where last left off?
-  print "<form method="link" action="basics1.py">
-  print "<p> Click the button below to start learning programming!" </p>"
-  print "<input type="submit" value="The Basics">
+  print '<form method="link" action="basics1.py">'
+  print '<p> Click the button below to start learning programming! </p>'
+  print '<input type="submit" value="The Basics">'
   print "</form>"
 print "</body>"
 print "</html>"
