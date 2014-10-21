@@ -42,6 +42,5 @@ else: #show login page
   print "<p> Click the button below to start learning programming!" </p>"
   print "<input type="submit" value="The Basics">
   print "</form>"
-print "<body>"
 print "</body>"
 print "</html>"
