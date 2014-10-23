@@ -48,3 +48,32 @@ input[type='submit'] {
 .submitDiv {
     margin-top: 1em;
 }
+
+/* homepage.html */
+.mainContent {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.nav {
+    position: relative;
+    height: 2em;
+    width: 5em;
+    left: 100%;
+    transform: translate(-100%, 0);
+    background-color: #ddd;
+}
+
+.logout {
+    position: absolute;
+    right: 0;
+}
+
+a#logout {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
