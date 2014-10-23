@@ -9,11 +9,25 @@ body {
   background-color: #fff;
 }
 
-#mainContent {
-  position: relative;
-  width: 98%;
-  margin: 0 auto;
-  padding: 0.5em;
+.mainContent {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.mainHeader {
+    position: relative;
+    top: 0;
+    width: inherit;
+}
+
+.nav {
+    position: relative;
+    height: 2em;
+    width: 5em;
+    left: 100%;
+    transform: translate(-100%, 0);
+    background-color: #ddd;
 }
 
 div {
@@ -50,21 +64,6 @@ input[type='submit'] {
 }
 
 /* homepage.html */
-.mainContent {
-    position: relative;
-    width: 900px;
-    margin: 0 auto;
-}
-
-.nav {
-    position: relative;
-    height: 2em;
-    width: 5em;
-    left: 100%;
-    transform: translate(-100%, 0);
-    background-color: #ddd;
-}
-
 .logout {
     position: absolute;
     right: 0;
