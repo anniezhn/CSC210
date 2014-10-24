@@ -6,18 +6,14 @@ jQuery(document).ready(function ($) {
         success: function (data) {
             if (data === "true") {
                 window.location.href = "http://tnichols.rochestercs.org/homepage.html";
+            } else {
+                console.log(data);
             }
         },
         error: function (jqXHR, errorStatus, errorString) {
-            $("body").prepend(
-                "<div>" +
-                "<ul>" +
-                    "<li>Error: " + errorStatus + "</li>" +
-                    "<li>Message: " + errorString + "</li>" +
-                "</ul>" +
-                "</div>" +
-                "<div>Something went wrong.</div>"
-            );
+            console.log(jqXHR);
+            console.log(errorStatus);
+            console.log(errorString);
         }
     });
 });
