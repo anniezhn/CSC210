@@ -43,13 +43,6 @@ if cookie_string: #we have a stored cookie already
 			print "<head><title>You're back!</title></head>"
 			print '<body>'
 			print '<h1>Welcome back ' + saved_name + '!</h1>'
-                        print '</br>'
-                        # Link to first lesson, maybe change this later to include a page with all lessons?
-                        # the ability to save progress?
-                        print '<form method="link" action="basics1.html">'
-                        print '<p>Click below to start the first lesson!</p>'
-                        print '<input type="submit" value="Basics 1">'
-                        print '</form>'
 			print '</body>'
 			print '</html>'
 		else:
