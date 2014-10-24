@@ -6,7 +6,7 @@
     <script src= “http://code.jquery.com/jquery-1.11.1.min.js”></script>
     <script type=“text/javascript”>
 	  $(document).ready(function() {
-	      $("#getStringDef").one('click', function() {
+<!-->	      $("#getStringDef").one('click', function() {
 	        $.ajax({
 	           url: "cgi-bin/basics1.py",
 	           type: "GET",
@@ -17,6 +17,21 @@
 	           }
 	        });
 	      });
+</-->
+    $("#getStringDef").click(function() {
+    $.ajax(
+      {
+        url: "cgi-bin/basics1.py",
+        type: "GET",
+        dataType: "text",
+
+        success: function(dat) {
+          console.dir(dat);
+          $("#string").append(dat);
+        },
+      }
+    );
+  });
 	  });
 	 
 </script>
