@@ -15,8 +15,8 @@
 	  url: "cgi-bin/basics1.py",
 	  type: "GET",
 	  dataType: "text",
-	  success: function(html) {
-	  location.reload(true);
+	  success: function(dat) {
+	  $("#getStringDef").append(dat);
 	  }
 	  });
 	  });
