@@ -99,6 +99,7 @@ else:
 			conn.commit() #call this to commit changes to MySQL database
 			cook = Cookie.SimpleCookie()
 			cook['session_id'] = session_id
+			#cook['session_id']['user'] = username
 			cook['session_id']['expires']=24*60*60  #set cookie to expire in a day
 			print 'Content-type: text/html'
 			print cook #send the cookie (Python takes care of format) to browser
@@ -107,6 +108,7 @@ else:
 			print '<body>'
 			print '<head><title>You have been logged in!</title></head>'
 			print '<h1>Hello, ' + username + ", You're now logged in.</h1>"
+			print '<p><a href="http://tnichols.rochestercs.org/homepage.html">Click here to start or continue learning!</a></p>'
 			print '<p>Enjoy the site!</p>'
 			print '</body>'
 			print '</html>'

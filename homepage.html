@@ -9,7 +9,12 @@
     <div class="mainContent">
         <div class="nav">
             <div class="logout">
-                <a id="logout" name="logout" href="#">Logout</a>
+                <!--a id="logout" name="logout" href="#">Logout</a-->
+		<form name="logout" method="post" action="cgi-bin/logout.py">
+		<label>
+		<input name="logout" type="submit" id="logout" value="Log out">
+		</label>
+		</form>
             </div>
         </div>
         <div id="dynamic">

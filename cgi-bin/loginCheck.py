@@ -5,7 +5,8 @@ import cgi, Cookie, os, cgitb, sys
 
 #failedAttempt = print "Hello!"
 #sys.exit(0)
-if 'HTTP_COOKIE' in os.environ: #redirect
+cookie = os.environ.get('HTTP_COOKIE')
+if cookie: #redirect
 	print 'Content-type: text/plain'
 	print
 	print "http://tnichols.rochestercs.org/homepage.html"
