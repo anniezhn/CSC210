@@ -3,14 +3,14 @@
 #Check if there is a cookie, which indicates the user is logged in
 import cgi, Cookie, os, cgitb, sys
 
-'''failedAttempt = print "Hello!"
-sys.exit(0)
+#failedAttempt = print "Hello!"
+#sys.exit(0)
 if 'HTTP_COOKIE' in os.environ: #redirect
 	#print 'Content-type: text/html'
-	print "Location: http://tnichols.rochestercs.org/homepage.html"
+	print "Location:http://tnichols.rochestercs.org/homepage.html"
 	print
 
-def main(): #return True if there's a cookie and false if not
+'''def main(): #return True if there's a cookie and false if not
 	#print "Hey there!"
 	if 'HTTP_COOKIE' in os.environ:
 		print "COOKIE"
@@ -22,9 +22,9 @@ def main(): #return True if there's a cookie and false if not
 if __name__ == "__main__":
 	main()'''
 
-print "Content-type: text/plain"
+'''print "Content-type: text/plain"
 print #remember the blank line
 if 'HTTP_COOKIE' in os.environ:
 	print "true"
 else:
-	print "false"
+	print "false"'''
