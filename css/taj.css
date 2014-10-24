@@ -24,7 +24,7 @@ body {
 .nav {
     position: relative;
     height: 2em;
-    width: 5em;
+    width: 50%;
     left: 100%;
     transform: translate(-100%, 0);
     background-color: #ddd;
