@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
         method: "GET",
         dataType: "text",
         success: function (data) {
-            window.location.href = data;
+            console.log(data);
         },
         error: function (jqXHR, errorStatus, errorString) {
             console.log(jqXHR);
