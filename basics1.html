@@ -3,8 +3,27 @@
   <head>
     <title>TAJ: Basics 1 </title>
     <link href="css/taj.css" rel="stylesheet" type="text/css" />
-    <script src="js/basics1.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function($) {
+	  console.log("Test");
+    $("#getStringDef").click(function() {
+    $.ajax(
+      {
+        url: "../cgi-bin/basics1.py",
+        type: "GET",
+        dataType: "text",
+
+        success: function(dat) {
+          console.dir(dat);
+          $("#string").append(dat);
+        },
+      }
+    );
+  });
+});
+</script>
+    
 </head>
 
 <body>
