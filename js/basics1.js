@@ -1,4 +1,4 @@
- jQuery(document).ready(function($) {
+$(document).ready(function() {
 	  console.log("Test");
  //I found this click once function online but it's not working.
 //	  $("#getStringDef").one('click', function() {
