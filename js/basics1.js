@@ -16,7 +16,7 @@
     $("#getStringDef").click(function() {
     $.ajax(
       {
-        url: "cgi-bin/basics1.py",
+        url: "../cgi-bin/basics1.py",
         type: "GET",
         dataType: "text",
 
