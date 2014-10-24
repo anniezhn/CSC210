@@ -48,7 +48,7 @@ if cookie_string: #we have a stored cookie already
 		else:
 			print 'Content-type: text/html'
 			print
-			print '<html>' 
+			print '<html>'
 			print '<head><title>Someone else is logged in!</title></head>'
 			print '<body>'
 			print "<h1>Hey! You can't do that!</h1>"
@@ -64,7 +64,7 @@ if cookie_string: #we have a stored cookie already
 		print '<body>'
 		print '<h1>Error, wrong session_id! See why this could have happened...</h1>'
 		print '</body>'
-		print '</html>' 
+		print '</html>'
 
 else:
 	nocookie = '''print 'Content-type: text/html'
@@ -99,7 +99,7 @@ else:
 			conn.commit() #call this to commit changes to MySQL database
 			cook = Cookie.SimpleCookie()
 			cook['session_id'] = session_id
-			cookie['session_id']['expires']=24*60*60  #set cookie to expire in a day
+			cook['session_id']['expires']=24*60*60  #set cookie to expire in a day
 			print 'Content-type: text/html'
 			print cook #send the cookie (Python takes care of format) to browser
 			print # don't forget newline
