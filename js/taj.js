@@ -4,11 +4,7 @@ jQuery(document).ready(function ($) {
         method: "GET",
         dataType: "text",
         success: function (data) {
-            if (data === true) {
-                window.location.href = "http://tnichols.rochestercs.org/homepage.html";
-            } else {
-                console.log(data);
-            }
+            window.location.href = data;
         },
         error: function (jqXHR, errorStatus, errorString) {
             console.log(jqXHR);

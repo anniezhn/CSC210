@@ -7,7 +7,7 @@ import cgi, Cookie, os, cgitb, sys
 #sys.exit(0)
 if 'HTTP_COOKIE' in os.environ: #redirect
 	#print 'Content-type: text/html'
-	print "Location:http://tnichols.rochestercs.org/homepage.html"
+	print "http://tnichols.rochestercs.org/homepage.html"
 	print
 
 '''def main(): #return True if there's a cookie and false if not
