@@ -5,7 +5,9 @@
     <script src= “http://code.jquery.com/jquery-1.11.1.min.js”></script>
     <script type=“text/javascript”>
 	  $(document).ready(function() {
-<!-->	      $("#getStringDef").one('click', function() {
+	  console.log("Test");
+	  <!--> I found this click once function online but it's not working.
+	  $("#getStringDef").one('click', function() {
 	        $.ajax({
 	           url: "cgi-bin/basics1.py",
 	           type: "GET",
@@ -13,7 +15,7 @@
 	           success: function(dat) {
 	             console.log(dat);
 	             $("#string").append('<li>' + dat + '</li>');
-	           }
+	           },
 	        });
 	      });
 </-->
@@ -31,7 +33,7 @@
       }
     );
   });
-	  });
+});
 	 
 </script>
  <link href="css/taj.css" rel="stylesheet" type="text/css" />
@@ -54,14 +56,12 @@
 	
 	<p>Variables are something that you might have heard in math class. 
 	In computer science, variables are not something you are solving for but rather something you use as storage for data.</p>
-	</br>
 	<p>There are many different types of variables, let's look at a few</p>
-	</br>
-	<h2><i>Click the button to see what the different types of variables are! </i></h2>
+	<p><i>Click the button to see what the different types of variables are! </i></p>
 </br>
+</div>
 	
 	<button id=“getStringDef”>String</button>
-	<div id=“string”></div>
-  </div>
+	<div id=“string”> </div>
 </body>
 </html>
