@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
         method: "GET",
         dataType: "text",
         success: function (data) {
-            if (data === true) {
+            if (data === "True") {
                 window.location.href = "http://tnichols.rochestercs.org/homepage.html";
             }
         },
@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
                 "<div>" +
                 "<ul>" +
                     "<li>Error: " + errorStatus + "</li>" +
-                    "<li>Message: " + errorString + "</li>" + 
+                    "<li>Message: " + errorString + "</li>" +
                 "</ul>" +
                 "</div>" +
                 "<div>Something went wrong.</div>"
