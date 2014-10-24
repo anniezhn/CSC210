@@ -6,11 +6,10 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function($) {
-	  console.log("Test");
-    $("#getStringDef").click(function() {
-    $.ajax(
+      $("#getStringDef").click(function() {
+      $.ajax(
       {
-        url: "../cgi-bin/basics1.py",
+        url: "/cgi-bin/basics1.py",
         type: "GET",
         dataType: "text",
 
