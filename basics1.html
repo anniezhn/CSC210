@@ -6,20 +6,18 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function($) {
-      $("#getStringDef").click(function() {
-      $.ajax(
-      {
-        url: "cgi-bin/basics1.py",
-        type: "GET",
-        dataType: "text",
-
-        success: function(dat) {
-          console.dir(dat);
-          $("#string").append(dat);
-        },
-      }
-    );
-  });
+      $("#getStringDef").one('click', function() {
+	        $.ajax({
+	           url: "cgi-bin/basics1.py",
+	           type: "GET",
+	           dataType: "text",
+                   cache: false,
+	           success: function(dat) {
+	             console.log(dat);
+	             $("#string").append('<li>' + dat + '</li>');
+	           },
+	        });
+	      });
 });
 </script>
     
