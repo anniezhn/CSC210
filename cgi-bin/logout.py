@@ -6,22 +6,22 @@ import MySQLdb as mdb
 
 #setup
 cgitb.enable() #catch Python errors
-#conn = mdb.connect('localhost', 'tnichol1', 'TeamTAJ2!', 'tnichol1_CSC210') #connect to MySQL
-#cur = conn.cursor()
 
-#get cookie and set its expiration date in the past
-cookie = Cookie.SimpleCookie()
-#username = cookie['user']
-#username = cookie['session_id']['user']
+#get both cookies and set expiration dates in the past
+cookie = Cookie.SimpleCookie(os.environ['HTTP_COOKIE'])
+username = cookie['user'].value
 cookie['session_id'] = ""
+cookie['user'] = ""
 cookie['session_id']['expires']='Thu, 01 Jan 1970 00:00:00 GMT' #apparently this is the convention
+cookie['user']['expires']='Thu, 01 Jan 1970 00:00:00 GMT'
 
-print cookie
 print "Content-type: text/html"
-#print 'Set-Cookie:session_id=""'
+print cookie
 print
-print "<head><title>You have been logged out!</title><head>"
-print "<h1>You have been logged out -- thanks for visiting!</h1>"
+print "<html>"
+print "<head><title>You have been logged out, " + username + "!</title><head>"
+print "<body>"
+print "<h1>You have been logged out, " + username + "-- thanks for visiting!</h1>"
 print "<h2>You can visit our home page to log in again: </h2>"
 print '<p><a href="http://tnichols.rochestercs.org">Home Page</a></p>'
 print "</body>"
