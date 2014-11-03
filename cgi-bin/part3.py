@@ -77,11 +77,12 @@ else:
 	print '</html>'
 	sys.exit(0)'''
 	cur.execute('select UserID from Users where Username=%s;', username)
-	#userID = cur.fetchone()[0]
-	if cur.fetchone() is not None: #valid username, now we need to check if passwords match
-		userID = cur.fetchone()[0]
+	result = cur.fetchone()
+	if result is not None: #valid username, now we need to check if passwords match
+		userID = result[0]
 		cur.execute('select Pwd from Passwords where UserID=%s', userID)
 		stored_password = str(cur.fetchone()[0])
+		#stored_password = 'password'
 		if password != stored_password: #valid username but wrong associated password
 			print 'Content-type: text/html'
 			print
