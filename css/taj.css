@@ -69,6 +69,12 @@ input[type='submit'] {
     right: 0;
 }
 
+.delete {
+    position: absolute;
+    height: 100%;
+    right: 5em;
+}
+
 /* text styles */
 .b {
   font-weight: bold;
