@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    $("#basics1").one("click", function () {
+    $("#dynamic").one("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",
           type: "GET",
@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $("#getStringDef").one('click', function() {
+    $("#dynamic").one("click", "#getStringDef", function() {
       $.ajax({
          url: "cgi-bin/basics1.py",
          type: "GET",
