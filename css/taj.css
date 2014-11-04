@@ -69,8 +69,19 @@ input[type='submit'] {
     right: 0;
 }
 
-a#logout {
-    display: block;
-    position: absolute;
-    right: 1em;
+/* text styles */
+.b {
+  font-weight: bold;
+}
+
+.i {
+  font-style: italic;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.note {
+  font-size: 0.85em;
 }
