@@ -1,10 +1,5 @@
 #!/usr/bin/python
 
-#import cgi
-#import sys
-#import cgitb
-#cgitb.enable() #catch Python errors
-#form = cgi.FieldStorage()
 
 print "Content-type: text/plain"
 print
