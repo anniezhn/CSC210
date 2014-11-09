@@ -8,7 +8,7 @@
       $(document).ready(function($) {
       $("#getStringDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1-string.py",
+	           url: "cgi-bin/basics1/basics1-string.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -20,7 +20,7 @@
 	      });
       $("#getCharDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1-char.py",
+	           url: "cgi-bin/basics1/basics1-char.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -32,7 +32,7 @@
 	      });
        $("#getIntDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1-int.py",
+	           url: "cgi-bin/basics1/basics1-int.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -44,7 +44,7 @@
 	      });
        $("#getFloatDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1-float.py",
+	           url: "cgi-bin/basics1/basics1-float.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -56,7 +56,7 @@
 	      });
        $("#getBoolDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1-bool.py",
+	           url: "cgi-bin/basics1/basics1-bool.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -68,7 +68,7 @@
 	      });
        $("#getArrayDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1-array.py",
+	           url: "cgi-bin/basics1/basics1-array.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -85,16 +85,6 @@
 
 <body>
   <div class="mainContent">
-     <div class="nav">
-            <div class="logout">
-                <!--a id="logout" name="logout" href="#">Logout</a-->
-		<form name="logout" method="post" action="cgi-bin/logout.py">
-		<label>
-		<input name="logout" type="submit" id="logout" value="Log out">
-		</label>
-		</form>
-            </div>
-        </div>
 	<h1>First Lesson: </h1></br>
 	<h2>What are <i>variables</i>?</h2></br>
 	
