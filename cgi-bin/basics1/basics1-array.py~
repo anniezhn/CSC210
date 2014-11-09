@@ -1,5 +1,0 @@
-#!/usr/bin/python
-
-print "Content-type: text/plain"
-print
-print 'An array is basically a list of other variables in some order.
