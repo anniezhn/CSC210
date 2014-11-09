@@ -4,25 +4,25 @@
     <title>Welcome Home to TAJ&#8217;s Webpage</title>
     <link rel="stylesheet" type="text/css" href="css/taj.css"/>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/taj.js"></script>
 </head>
 <body>
     <div class="mainContent">
         <div class="nav">
             <div class="logout">
-                <!--a id="logout" name="logout" href="#">Logout</a-->
-		<form name="logout" method="post" action="cgi-bin/logout.py">
-		<label>
-		<input name="logout" type="submit" id="logout" value="Log out">
-		</label>
-		</form>
+      		      <form name="logout" id="logoutForm" method="post" action="cgi-bin/logout.py">
+        		      <input name="logout" type="submit" id="logout" value="Log out">
+      		      </form>
+            </div>
+             <div class="delete">
+                <form name="delete" id="deleteForm" method="post" action="cgi-bin/delete.py">
+                  <input name="delete" type="submit" id="deleteB" value="Delete your account">
+                </form>
             </div>
         </div>
         <div id="dynamic">
-            <p>It's time to learn some coding concepts!</p>
-	     <form method="link" action="basics1.html">
-		    <p>Click below to start the first lesson!</p>
-		    <input type="submit" value="Basics 1">
-		  </form>
+		        <p>Click below to start the first lesson!</p>
+	          <input type="button" id="basics1" value="Basics 1">
         </div>
     </div>
 </body>

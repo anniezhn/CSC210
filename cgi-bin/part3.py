@@ -77,10 +77,12 @@ else:
 	print '</html>'
 	sys.exit(0)'''
 	cur.execute('select UserID from Users where Username=%s;', username)
-	userID = cur.fetchone()[0]
-	if len(str(userID)) > 0: #valid username, now we need to check if passwords match
+	result = cur.fetchone()
+	if result is not None: #valid username, now we need to check if passwords match
+		userID = result[0]
 		cur.execute('select Pwd from Passwords where UserID=%s', userID)
 		stored_password = str(cur.fetchone()[0])
+		#stored_password = 'password'
 		if password != stored_password: #valid username but wrong associated password
 			print 'Content-type: text/html'
 			print
@@ -97,16 +99,19 @@ else:
 			session_id = str(uuid.uuid4()) #generate secure, random session ID
 			cur.execute('update Users set SessionID=%s where UserID=%s',(session_id, userID))
 			conn.commit() #call this to commit changes to MySQL database
-			cook = Cookie.SimpleCookie()
-			cook['session_id'] = session_id
-			#cook['session_id']['user'] = username
-			cook['session_id']['expires']=24*60*60  #set cookie to expire in a day
+			cook1 = Cookie.SimpleCookie()
+			cook1['session_id'] = session_id
+			cook1['session_id']['expires']=24*60*60  #set cookie to expire in a day
+			cook2 = Cookie.SimpleCookie()
+			cook2['user'] = username
+			cook2['user']['expires']=24*60*60
 			print 'Content-type: text/html'
-			print cook #send the cookie (Python takes care of format) to browser
+			print cook1 #send the cookies (Python takes care of format) to browser
+			print cook2
 			print # don't forget newline
 			print '<html>'
-			print '<body>'
 			print '<head><title>You have been logged in!</title></head>'
+			print '<body>'
 			print '<h1>Hello, ' + username + ", You're now logged in.</h1>"
 			print '<p><a href="http://tnichols.rochestercs.org/homepage.html">Click here to start or continue learning!</a></p>'
 			print '<p>Enjoy the site!</p>'
