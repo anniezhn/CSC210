@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--
 <html>
   <head>
     <title>TAJ: Basics 1 </title>
@@ -9,7 +8,7 @@
       $(document).ready(function($) {
       $("#getStringDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1/basics1-string.py",
+	           url: "cgi-bin/basics1-string.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -21,7 +20,7 @@
 	      });
       $("#getCharDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1/basics1-char.py",
+	           url: "cgi-bin/basics1-char.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -33,7 +32,7 @@
 	      });
        $("#getIntDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1/basics1-int.py",
+	           url: "cgi-bin/basics1-int.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -45,7 +44,7 @@
 	      });
        $("#getFloatDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1/basics1-float.py",
+	           url: "cgi-bin/basics1-float.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -57,7 +56,7 @@
 	      });
        $("#getBoolDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1/basics1-bool.py",
+	           url: "cgi-bin/basics1-bool.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -69,7 +68,7 @@
 	      });
        $("#getArrayDef").one('click', function() {
 	        $.ajax({
-	           url: "cgi-bin/basics1/basics1-array.py",
+	           url: "cgi-bin/basics1-array.py",
 	           type: "GET",
 	           dataType: "text",
                    cache: false,
@@ -81,12 +80,14 @@
 	      });
 });
 </script>
-
+    
 </head>
 
 <body>
+  <div class="mainContent">
      <div class="nav">
             <div class="logout">
+                <!--a id="logout" name="logout" href="#">Logout</a-->
 		<form name="logout" method="post" action="cgi-bin/logout.py">
 		<label>
 		<input name="logout" type="submit" id="logout" value="Log out">
@@ -94,19 +95,15 @@
 		</form>
             </div>
         </div>
--->
-<div class="mainContent">
-	<h1>First Lesson: </h1>
-  <br/>
-	<h2>What are <span class="i">variables</span>?</h2>
-  <br/>
-
-	<p>Variables are something that you might have heard in math class.
+	<h1>First Lesson: </h1></br>
+	<h2>What are <i>variables</i>?</h2></br>
+	
+	<p>Variables are something that you might have heard in math class. 
 	In computer science, variables are not something you are solving for but rather something you use as storage for data.</p>
 	<p>There are many different types of variables, let's look at a few</p>
-	<p><span class="note i">Click the button to see what the different types of variables are!</span></p>
-  <br/>
-
+	<p><small><i>Click the button to see what the different types of variables are! </i></small></p>
+</br>
+	
 	<button id="getStringDef">String</button>
 	<div id="string"> </div>
 	</br>
@@ -126,3 +123,5 @@
 	<div id="array"> </div>
 
 </div>
+</body>
+</html>
