@@ -1,4 +1,6 @@
 jQuery(document).ready(function ($) {
+    $("#userID").text($.cookie("user"));
+
     $("#dynamic").one("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",

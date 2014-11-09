@@ -4,15 +4,15 @@
 	<title>TAJ Signup</title>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="js/signup.js"></script>
-	<link href=“css/taj.css” rel=“stylesheet” type=“text/css”/>
+	<link href="css/taj.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <div class=“mainContent”>
+  <div class="mainContent">
 	<div class="mainHeader">
-		<div class="nav">
+		<!-- div class="nav">
 
-		</div>
+		</div -->
 	</div>
     <h1>Create an Account With TAJ</h1></br>
 
@@ -21,11 +21,11 @@
       <form id="signUp" method="post" action="cgi-bin/account-create.py">
 	<div class="field">
 	  <label for="fname">First Name:</label>
-	  <input type=text name="fname" id="fname" tabindex="5">
+	  <input type=text name="fname" id="fname" tabindex="1">
 	</div>
 	<div class="field">
 	  <label>Birthday:</label>
-	  <select name="month" id="month" tabindex="6">
+	  <select name="month" id="month" tabindex="2">
 	    <option value="">Month</option>
 	    <option value="01">Jan</option>
 	    <option value="02">Feb</option>
@@ -40,23 +40,23 @@
 	    <option value="11">Nov</option>
 	    <option value="12">Dec</option>
 	  </select>
-	  <select name="day" id="day" tabindex="7">
+	  <select name="day" id="day" tabindex="3">
 	    <option value="">Day</option>
 	  </select>
-	  <select name="year" id="year" tabindex="8">
+	  <select name="year" id="year" tabindex="4">
 	    <option value="">Year</option>
 	  </select>
 	</div>
 	<div class="field">
 	  <label for="username">Username:</label>
-	  <input type=text name="username" id="username" tabindex="9">
+	  <input type=text name="username" id="username" tabindex="5">
 	</div>
 	<div class="field">
 	  <label for="password">Password:</label>
-	  <input type=text name="password" id="password" tabindex="10">
+	  <input type=text name="password" id="password" tabindex="6">
 	</div>
 	<div class="submitDiv">
-	  <input type="submit" type=text tabindex="11"/> <input type="reset" type=text tabindex="12">
+	  <input type="submit" type=text tabindex="7" value="Create Account"/> <input type="reset" type=text tabindex="8">
 	</div>
       </form>
     </div> <!-- close .formWrapper -->

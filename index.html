@@ -2,6 +2,7 @@
 <html>
   <head>
   <title>TAJ&#8217;s Webpage</title>
+  <meta charset="utf-8"/>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<link href="css/taj.css" rel="stylesheet" type="text/css"/>
   <script src="js/loginCheck.js"></script>
@@ -10,28 +11,27 @@
 <body>
   <div class="mainContent">
       <div class="mainHeader">
-          <div class="nav">
+          <!-- div class="nav">
 
-          </div>
+          </div -->
       </div>
 		<h1>TAJ: Where kids can learn how to code!</h1>
 
 		<p>Welcome to Team TAJ&#39;s webpage!</p>
-		<br />
-		<img src="images/code.jpg" />
+		<img id="codeImg" src="images/code.jpg" />
 		<div class="formWrapper">
 		  <h2>Sign In</h2>
 			<form id="signIn" method="post" action="cgi-bin/part3.py">
 			  <div class="field">
 				  <label for="loginUsername">Username:</label>
-					<input name="username" id="loginUsername" type=text tabindex="1"/>
+					<input name="username" id="loginUsername" type="text" tabindex="1"/>
 				</div>
 				<div class="field">
 				  <label for="loginPassword">Password:</label>
-					<input name="password" id="loginPassword" type=text tabindex="2"/>
+					<input name="password" id="loginPassword" type="password" tabindex="2"/>
 				</div>
 				<div class="submitDiv">
-				  <input type="submit" tabindex="3"/> <input type="reset" tabindex="4"/>
+				  <input type="submit" tabindex="3" value="Sign In"/> <input type="reset" tabindex="4"/>
 				</div>
 			</form>
 		</div> <!-- close .formWrapper -->
