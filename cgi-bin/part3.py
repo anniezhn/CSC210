@@ -102,9 +102,11 @@ else:
 			cook1 = Cookie.SimpleCookie()
 			cook1['session_id'] = session_id
 			cook1['session_id']['expires']=24*60*60  #set cookie to expire in a day
+			cook1['session_id']['path']='/'
 			cook2 = Cookie.SimpleCookie()
 			cook2['user'] = username
 			cook2['user']['expires']=24*60*60
+			cook2['user']['path']='/'
 			print 'Content-type: text/html'
 			print cook1 #send the cookies (Python takes care of format) to browser
 			print cook2
