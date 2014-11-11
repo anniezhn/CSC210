@@ -1,6 +1,7 @@
 $(function(){
 	var progress = $('#progress'),
     progressKeeper = $('#progressKeeper'),
+	kroggy = { answers: ['c', 'b', 'a' ] },
     notice = $("#notice"),
     progressWidth = 548,
     answers= kroggy.answers,
@@ -8,8 +9,6 @@ $(function(){
     questionLength= answers.length,
     questionsStatus = $("#questionNumber");
     questionsList = $(".question");
-
-    var kroggy = { answers: ['c', 'b', 'a' ] };
 
     function roundReloaded(num, dec) {
     var result = Math.round(num*Math.pow(10,dec))/Math.pow(10,dec);
@@ -89,7 +88,7 @@ $('.btnShowResult').click(function(){
               score;
 
 
-		for (var i = 0, ii = results.length; i < ii; i++){ 
+		for (var i = 0, ii = results.length; i < ii; i++){
     if (results[i] == true) trueCount++;
     resultSet += '<div class="resultRow"> Question #' + (i + 1) + (results[i]== true ? "<div class='correct'><span>Correct</span></div>": "<div class='wrong'><span>Wrong</span></div>") + "</div>";
     answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
