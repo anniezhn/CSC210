@@ -95,6 +95,14 @@ input[type='submit'] {
     margin: 0;
 }
 
+#theme {
+    position: absolute;
+    right: 17em;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+}
+
 /* text styles */
 .b {
   font-weight: bold;
