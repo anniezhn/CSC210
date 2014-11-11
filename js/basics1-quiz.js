@@ -6,8 +6,9 @@ $(function(){
     progressWidth = 548,
     answers= kroggy.answers,
     userAnswers = [],
+	answerKey = "",
     questionLength= answers.length,
-    questionsStatus = $("#questionNumber");
+    questionsStatus = $("#questionNumber"),
     questionsList = $(".question");
 
     function roundReloaded(num, dec) {
