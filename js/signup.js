@@ -73,6 +73,7 @@ var updateDayList = function (dayList, month, year) {
 jQuery(document).ready(function ($) {
   popInitialDayList($("#day")[0]);
   popYearList($("#year")[0]);
+  $("#fname").focus();
 
   $("#month").change(function () {
     updateDayList($("#day")[0], $("#month").val(), $("#year").val());

@@ -2,23 +2,39 @@
 <html>
 <head>
     <title>Welcome Home to TAJ&#8217;s Webpage</title>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/taj.css"/>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/taj.js"></script>
+    <link id="themeLink" rel="stylesheet" type="text/css" href=""/>
 </head>
 <body>
     <div class="mainContent">
-        <div class="nav">
-            <div class="logout">
-      		      <form name="logout" id="logoutForm" method="post" action="cgi-bin/logout.py">
-        		      <input name="logout" type="submit" id="logout" value="Log out">
-      		      </form>
-            </div>
-             <div class="delete">
-                <form name="delete" id="deleteForm" method="post" action="cgi-bin/delete.py">
-                  <input name="delete" type="submit" id="deleteB" value="Delete your account">
-                </form>
-            </div>
+        <div class="mainHeader">
+          <div class="welcomeMsg">
+            <h1>Welcome, <span id="userID">user!</span></h1>
+          </div>
+          <div class="nav">
+              <div class="logout">
+                  <form name="logout" id="logoutForm" method="post" action="cgi-bin/logout.py">
+                    <input name="logout" type="submit" id="logout" value="Log out">
+                  </form>
+              </div>
+               <div class="delete">
+                  <form name="delete" id="deleteForm" method="post" action="cgi-bin/delete.py">
+                    <input name="delete" type="submit" id="deleteB" value="Delete your account">
+                  </form>
+              </div>
+              <div id="theme">
+                  <select id="themeChoice">
+                    <option value="">No Theme</option>
+                    <option value="inverse">Inverse</option>
+                    <option value="monoGreen">Monochrome Green</option>
+                    <option value="monoAmber">Monochrome Amber</option>
+                  </select>
+              </div>
+          </div>
         </div>
         <div id="dynamic">
 		        <p>Click below to start the first lesson!</p>

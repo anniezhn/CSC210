@@ -14,6 +14,8 @@ cookie['session_id'] = ""
 cookie['user'] = ""
 cookie['session_id']['expires']='Thu, 01 Jan 1970 00:00:00 GMT' #apparently this is the convention
 cookie['user']['expires']='Thu, 01 Jan 1970 00:00:00 GMT'
+cookie['session_id']['path']="/"
+cookie['user']['path']= "/"
 
 print "Content-type: text/html"
 print cookie
@@ -23,6 +25,7 @@ print "<head><title>You have been logged out, " + username + "!</title><head>"
 print "<body>"
 print "<h1>You have been logged out, " + username + "-- thanks for visiting!</h1>"
 print "<h2>You can visit our home page to log in again: </h2>"
+print "<p>Cookie: " + str(cookie['user']) + str(cookie['session_id']) + "</p>"
 print '<p><a href="http://tnichols.rochestercs.org">Home Page</a></p>'
 print "</body>"
 print "</html>"

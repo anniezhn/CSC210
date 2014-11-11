@@ -1,4 +1,8 @@
 jQuery(document).ready(function ($) {
+    $("#userID").text($.cookie("user"));
+    $("#themeLink").attr("href", localStorage.getItem("themePath"));
+    $("#themeChoice").val(localStorage.getItem("themeName"));
+
     $("#dynamic").one("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",
@@ -27,5 +31,15 @@ jQuery(document).ready(function ($) {
       msg += "This action is permanent and cannot be undone!\n\n";
       msg += "Do you wish to delete your account?";
       return confirm(msg);
+    });
+
+    $("#themeChoice").change(function (event) {
+      var path = "";
+      localStorage.setItem("themeName", $(this).val());
+      if ($(this).val() !== "") {
+        path = "css/" + $(this).val() + ".css";
+      }
+      localStorage.setItem("themePath", path);
+      $("#themeLink").attr("href", path)
     });
 });

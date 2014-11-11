@@ -21,14 +21,6 @@ body {
     width: inherit;
 }
 
-.nav {
-    position: relative;
-    height: 2em;
-    width: 50%;
-    left: 50%;
-    background-color: #ddd;
-}
-
 div {
   margin: 0.3em;
 }
@@ -41,8 +33,15 @@ input[type='submit'] {
     margin-right: 1em;
 }
 
+#codeImg {
+  position: absolute;
+  top: 9em;
+  left: 50%;
+  margin-bottom: 1em;
+}
+
 .formWrapper {
-    width: 25%;
+    width: 40%;
     margin: 1em 0;
     padding: 0.5em;
     background-color: #ccc;
@@ -63,16 +62,45 @@ input[type='submit'] {
 }
 
 /* homepage.html */
+.welcomeMsg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 3em;
+}
+
+.nav {
+    position: relative;
+    height: 3em;
+    width: 50%;
+    top: -3em;
+    left: 50%;
+    background-color: #ddd;
+}
+
 .logout {
     position: absolute;
-    height: 100%;
     right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
 }
 
 .delete {
     position: absolute;
-    height: 100%;
     right: 5em;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+}
+
+#theme {
+    position: absolute;
+    right: 17em;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
 }
 
 /* text styles */
