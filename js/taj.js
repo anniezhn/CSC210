@@ -1,8 +1,7 @@
 jQuery(document).ready(function ($) {
     $("#userID").text($.cookie("user"));
-    $("#themeLink").attr("href", function () {
-      return localStorage.getItem("theme");
-    });
+    $("#themeLink").attr("href", localStorage.getItem("themePath"));
+    $("#themeChoice").val(localStorage.getItem("themeName"));
 
     $("#dynamic").one("click", "#basics1", function () {
         $.ajax({
@@ -25,10 +24,11 @@ jQuery(document).ready(function ($) {
 
     $("#themeChoice").change(function (event) {
       var path = "";
+      localStorage.setItem("themeName", $(this).val());
       if ($(this).val() !== "") {
         path = "css/" + $(this).val() + ".css";
       }
-      localStorage.setItem("theme", path);
+      localStorage.setItem("themePath", path);
       $("#themeLink").attr("href", path)
     });
 });
