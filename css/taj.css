@@ -76,8 +76,7 @@ input[type='submit'] {
     width: 50%;
     top: -3em;
     left: 50%;
-    border: 1px solid #000;
-    border-radius: 5px;
+    background-color: #ddd;
 }
 
 .logout {
