@@ -1,0 +1,14 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>TAJ: Basics 1 Quiz</title>
+ <link href="css/taj.css" rel="stylesheet" type="text/css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+</script>
+</head>
+
+<body>
+<div class=“mainContent”>
+<div id=“main-quiz-holder>
+</div> <!-- close mainContent div -->

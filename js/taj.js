@@ -14,6 +14,17 @@ jQuery(document).ready(function ($) {
           }
         });
     });
+    $("#dynamic").one("click", "#basics1-quiz", function () {
+        $.ajax({
+          url: "basics1-quiz.html",
+          type: "GET",
+          dataType: "html",
+          cache: false,
+          success: function(dat) {
+            $("#dynamic").html(dat);
+          }
+        });
+    });
 
     $("#deleteB").click(function (event) {
       var msg = "This will delete your account.\n\n";
