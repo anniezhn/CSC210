@@ -11,6 +11,14 @@
      width: 600px; 
      font-family:  "Myriad", "Myriad Pro", "Helvetica","Segoe UI", "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
 } 
+
+#question{
+color: #000;
+}
+#intro-container{
+color: #000;
+}
+
 #main-quiz-holder a { 
     text-decoration: none; 
 } 
