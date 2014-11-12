@@ -123,15 +123,15 @@ h2.qTitle {
 .hide { display: none; } 
 .btnPrev { 
     padding-left: 24px; 
-    background: url(img/back.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .btnNext { 
     padding-right: 24px; 
-    background: url(img/forward.png) right no-repeat; 
+    background: right no-repeat; 
 } 
 .btnShowResult{ 
     padding-left: 24px; 
-    background: url(img/confirm.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .btnStart { 
     display: block; 
@@ -176,11 +176,11 @@ h2.qTitle {
 } 
 .correct span { 
     padding: 0 20px; 
-    background: url(img/confirm.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .wrong span { 
     padding: 0 20px; 
-    background: url(img/delete.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 #answer-key { 
     text-align: center; 
@@ -314,15 +314,15 @@ h2.qTitle {
 .hide { display: none; } 
 .btnPrev { 
     padding-left: 24px; 
-    background: url(img/back.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .btnNext { 
     padding-right: 24px; 
-    background: url(img/forward.png) right no-repeat; 
+    background: right no-repeat; 
 } 
 .btnShowResult{ 
     padding-left: 24px; 
-    background: url(img/confirm.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .btnStart { 
     display: block; 
@@ -367,11 +367,11 @@ h2.qTitle {
 } 
 .correct span { 
     padding: 0 20px; 
-    background: url(img/confirm.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .wrong span { 
     padding: 0 20px; 
-    background: url(img/delete.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 #answer-key { 
     text-align: center; 
@@ -418,11 +418,11 @@ h2.qTitle {
 }
 .correct span { 
     padding: 0 20px; 
-    background: url(img/confirm.png) left no-repeat; 
+    background: left no-repeat; 
 } 
 .wrong span { 
     padding: 0 20px; 
-    background: url(img/delete.png) left no-repeat; 
+    background: left no-repeat; 
 }
 
 #answer-key { 
