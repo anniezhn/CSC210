@@ -1,7 +1,7 @@
 $(function(){
 	var progress = $('#progress'),
     progressKeeper = $('#progressKeeper'),
-	kroggy = { answers: ['c', 'b', 'a' ] },
+	kroggy = { answers: ['c', 'b', 'd', 'a'] },
     notice = $("#notice"),
     progressWidth = 548,
     answers= kroggy.answers,
@@ -96,7 +96,6 @@ $('.btnShowResult').click(function(){
 }
 	score =  roundReloaded(trueCount / questionLength*100, 2);
 
-});
 
 answerKey = "<div id='answer-key'>" + answerKey + "</div>";
 resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey;
@@ -114,6 +113,7 @@ $('.answers li input').click(function() {
     $(this).parents('li').addClass('selected');
 });
 
+});
 
 
 

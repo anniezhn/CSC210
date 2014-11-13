@@ -6,34 +6,34 @@
  <link href="css/taj.css" rel="stylesheet" type="text/css" />
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
-
 <body>
 -->
 
 <script src="js/basics1-quiz.js"></script>
+<script src="js/taj.js"></script>
 <div class="mainContent">
 	<h1>Basics 1: Quiz!</h1>
 	<div id="main-quiz-holder">
     <div id="intro-container" class="questionContainer">
-    	<a class="btnStart" href="#"><font size="36:">
+    	<a class="btnStart" href="#"><font size="36" color="black">
     		Let's start the quiz!</font></a>
     </div>
     <div class="questionContainer hide">
-        <div class="question">
-            Which one is a string?
+        <div class="question"><font color="black">
+            Which one is a string?</font>
         </div>
         <ul class="answers">
             <li>
-            <label><input data-key="a" type="radio">Hello!</label>
+            <label><input data-key="a" type="radio" name="q1">Hello!</label>
             </li>
             <li>
-            <label><input data-key="b" type="radio">4354.54</label>
+            <label><input data-key="b" type="radio" name="q1">4354.54</label>
             </li>
             <li>
-            <label><input data-key="c" type="radio">"Hello World"</label>
+            <label><input data-key="c" type="radio" name="q1">"Hello World"</label>
             </li>
             <li>
-            <label><input data-key="d" type="radio">!@#$^</label>
+            <label><input data-key="d" type="radio" name="q1">!@#$^</label>
             </li>
         </ul>
         <div class="btnContainer">
@@ -46,21 +46,21 @@
     </div>
 
     <div class="questionContainer hide">
-        <div class="question">
-            What is true about floats?
+        <div class="question"><font color="black">
+            What is true about floats?</font>
         </div>
         <ul class="answers">
             <li>
-            <label><input data-key="a" type="radio">Floats are smaller than ints.</label>
+            <label><input data-key="a" type="radio" name="q2">Floats are smaller than ints.</label>
             </li>
             <li>
-            <label><input data-key="b" type="radio">Floats can have numbers after the decimal.</label>
+            <label><input data-key="b" type="radio" name="q2">Floats can have numbers after the decimal.</label>
             </li>
             <li>
-            <label><input data-key="c" type="radio">Floats can actually float!</label>
+            <label><input data-key="c" type="radio" name="q2">Floats can actually float!</label>
             </li>
             <li>
-            <label><input data-key="d" type="radio">Floats are delicious.</label>
+            <label><input data-key="d" type="radio" name="q2">Floats are delicious.</label>
             </li>
         </ul>
         <div class="btnContainer">
@@ -74,24 +74,55 @@
             </div>
         </div>
     </div>
-
-    <!-- More questions here possibly? -->
-    <div class="questionContainer hide">
-        <div class="question">
-            Strings can also be considered as arrays of
+    
+     <div class="questionContainer hide">
+        <div class="question"><font color="black">
+            Which of the following can a boolean represent?</font>
         </div>
         <ul class="answers">
             <li>
-            <label><input data-key="a" type="radio">chars</label>
+            <label><input data-key="a" type="radio" name="q3">We love TAJ!</label>
             </li>
             <li>
-            <label><input data-key="b" type="radio">thimbles</label>
+            <label><input data-key="b" type="radio" name="q3">100</label>
             </li>
             <li>
-            <label><input data-key="c" type="radio">thread</label>
+            <label><input data-key="c" type="radio" name="q3">947.21</label>
             </li>
             <li>
-            <label><input data-key="d" type="radio">none of the above</label>
+            <label><input data-key="d" type="radio" name="q3">true</label>
+            </li>
+        </ul>
+        <div class="btnContainer">
+            <div class="prev">
+                <a class="btnPrev" href="#">Prev</a>
+            </div>
+            <div class="next">
+                <a class="btnNext" href="#">Next</a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- More questions here possibly? -->
+    <div class="questionContainer hide">
+        <div class="question"><font color="black">
+            Strings can also be considered as arrays of </font>
+        </div>
+        <ul class="answers">
+            <li>
+            <label><input data-key="a" type="radio" name="q4">chars</label>
+            </li>
+            <li>
+            <label><input data-key="b" type="radio" name="q4">thimbles</label>
+            </li>
+            <li>
+            <label><input data-key="c" type="radio" name="q4">thread</label>
+            </li>
+            <li>
+            <label><input data-key="d" type="radio" name="q4">none of the above</label>
             </li>
         </ul>
         <div class="btnContainer">
@@ -117,7 +148,14 @@
         Please select an option
     </div>
 </div>
-</div> <!-- close mainContent div -->
+</div> 
+
+<div id="dynamic">
+	  <p>Do you want to review Basics 1 again?</p>
+	  <input type="button" id="basics1" value="Basics 1">
+        </div>
+        
+<!-- close mainContent div -->
 <!--
 </body>
 </html>
