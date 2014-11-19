@@ -1,3 +1,10 @@
+function assert(cond) {
+    if (!cond) {
+        alert("Something went wrong.");
+        console.log("Something went wrong.");
+    }
+}
+
 jQuery(document).ready(function ($) {
     $("#userID").text($.cookie("user"));
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
