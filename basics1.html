@@ -1,92 +1,5 @@
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>TAJ: Basics 1 </title>
-    <meta charset="utf-8"/>
-    <link href="css/taj.css" rel="stylesheet" type="text/css" />
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="js/taj.js"></script>
-<body>
--->
-
-<script type="text/javascript">
-$(document).ready(function($) {
-$("#getStringDef").one('click', function() {
-    $.ajax({
-       url: "cgi-bin/basics1/basics1-string.py",
-       type: "GET",
-       dataType: "text",
-           cache: false,
-       success: function(dat) {
-         console.log(dat);
-         $("#string").append('<p>' + dat + '</p>');
-       },
-    });
-  });
-$("#getCharDef").one('click', function() {
-    $.ajax({
-       url: "cgi-bin/basics1/basics1-char.py",
-       type: "GET",
-       dataType: "text",
-           cache: false,
-       success: function(dat) {
-         console.log(dat);
-         $("#char").append('<p>' + dat + '</p>');
-       },
-    });
-  });
-$("#getIntDef").one('click', function() {
-    $.ajax({
-       url: "cgi-bin/basics1/basics1-int.py",
-       type: "GET",
-       dataType: "text",
-           cache: false,
-       success: function(dat) {
-         console.log(dat);
-         $("#int").append('<p>' + dat + '</p>');
-       },
-    });
-  });
-$("#getFloatDef").one('click', function() {
-    $.ajax({
-       url: "cgi-bin/basics1/basics1-float.py",
-       type: "GET",
-       dataType: "text",
-           cache: false,
-       success: function(dat) {
-         console.log(dat);
-         $("#float").append('<p>' + dat + '</p>');
-       },
-    });
-  });
-$("#getBoolDef").one('click', function() {
-    $.ajax({
-       url: "cgi-bin/basics1/basics1-bool.py",
-       type: "GET",
-       dataType: "text",
-           cache: false,
-       success: function(dat) {
-         console.log(dat);
-         $("#bool").append('<p>' + dat + '</p>');
-       },
-    });
-  });
-$("#getArrayDef").one('click', function() {
-    $.ajax({
-       url: "cgi-bin/basics1/basics1-array.py",
-       type: "GET",
-       dataType: "text",
-           cache: false,
-       success: function(dat) {
-         console.log(dat);
-         $("#array").append('<p>' + dat + '</p>');
-       },
-    });
-  });
-});
-</script>
-  <div class="mainContent">
+<script src="js/basics1.js" type="text/javascript"></script>
+  <div>
 	<h1>First Lesson: </h1></br>
 	<h2>What are <i>variables</i>?</h2></br>
 
@@ -96,32 +9,31 @@ $("#getArrayDef").one('click', function() {
 	<p><small><i>Click the button to see what the different types of variables are! </i></small></p>
 </br>
 
-	<button id="getStringDef">String</button>
-	<div id="string"> </div>
-	</br>
-	<button id="getCharDef">Char</button>
-	<div id="char"> </div>
-	</br>
-	<button id="getIntDef">Int</button>
-	<div id="int"> </div>
-        </br>
-	<button id="getFloatDef">Float</button>
-	<div id="float"> </div>
-        </br>
-	<button id="getBoolDef">Boolean</button>
-	<div id="bool"> </div>
-	</br>
-	<button id="getArrayDef">Array</button>
-	<div id="array"> </div>
-	</br>
-	</br>
-	</br>
-	<div id="dynamic">
+<div class="defsContainer">
+    <div id="getStringDef" class="defTab">
+        String
+    </div>
+    <div id="getCharDef" class="defTab">
+        Char
+    </div>
+    <div id="getIntDef" class="defTab">
+        Int
+    </div>
+    <div id="getFloatDef" class="defTab">
+        Float
+    </div>
+    <div id="getBoolDef" class="defTab">
+        Boolean
+    </div>
+    <div id="getArrayDef" class="defTab">
+        Array
+    </div>
+    <div class="definition">
+
+    </div>
+</div>
+	<div>
 	  <p>Do you think you know all these variables? Take a quiz to find out!</p>
 	  <input type="button" id="basics1-quiz" value="Basics 1 Quiz">
         </div>
   </div>
-<!--
-</body>
-</html>
--->

@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
 
-    $("#dynamic").one("click", "#basics1", function () {
+    $("#dynamic").on("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",
           type: "GET",
@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
           }
         });
     });
-    $("#dynamic").one("click", "#basics1-quiz", function () {
+    $("#dynamic").on("click", "#basics1-quiz", function () {
         $.ajax({
           url: "basics1-quiz.html",
           type: "GET",

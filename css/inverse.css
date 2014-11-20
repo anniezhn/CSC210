@@ -3,7 +3,7 @@ body {
   color: #fff;
   font-family: Arial, Verdana, Sans-Serif;
 }
-.nav {
+.nav, .defTab, .definition {
   border-color: #fff;
 }
 

@@ -4,6 +4,6 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.nav {
+.nav, .defTab, .definition {
   border-color: #0f0;
 }

@@ -104,6 +104,32 @@ input[type='submit'] {
     margin: 0;
 }
 
+/* basics1 */
+.defContainer {
+    position: relative;
+}
+
+.defTab {
+    width: 8em;
+    height: 2em;
+    margin: 0;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.definition {
+    width: 47.6em;
+    height: 7em;
+    margin: 0;
+    padding: 0.5em;
+    clear: both;
+    border: 1px solid black;
+}
+
 /* text styles */
 .b {
   font-weight: bold;
