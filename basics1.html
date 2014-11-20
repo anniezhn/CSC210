@@ -13,72 +13,84 @@
 <script type="text/javascript">
 $(document).ready(function($) {
 $("#getStringDef").one('click', function() {
+	$("#loaderS").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-string.py",
        type: "GET",
        dataType: "text",
            cache: false,
        success: function(dat) {
+       $("#loaderS").html('');
          console.log(dat);
          $("#string").append('<p>' + dat + '</p>');
        },
     });
   });
 $("#getCharDef").one('click', function() {
+	$("#loaderC").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-char.py",
        type: "GET",
        dataType: "text",
            cache: false,
        success: function(dat) {
+       $("#loaderC").html('');
          console.log(dat);
          $("#char").append('<p>' + dat + '</p>');
        },
     });
   });
 $("#getIntDef").one('click', function() {
+	$("#loaderI").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-int.py",
        type: "GET",
        dataType: "text",
            cache: false,
        success: function(dat) {
+       $("#loaderI").html('');
          console.log(dat);
          $("#int").append('<p>' + dat + '</p>');
        },
     });
   });
 $("#getFloatDef").one('click', function() {
+	$("#loaderF").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-float.py",
        type: "GET",
        dataType: "text",
            cache: false,
        success: function(dat) {
+       $("#loaderF").html('');
          console.log(dat);
          $("#float").append('<p>' + dat + '</p>');
        },
     });
   });
 $("#getBoolDef").one('click', function() {
+	$("#loaderB").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-bool.py",
        type: "GET",
        dataType: "text",
            cache: false,
        success: function(dat) {
+       	$("#loaderB").html('');
          console.log(dat);
          $("#bool").append('<p>' + dat + '</p>');
        },
     });
   });
 $("#getArrayDef").one('click', function() {
+	$("#loaderA").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-array.py",
        type: "GET",
        dataType: "text",
            cache: false,
        success: function(dat) {
+       $("#loaderA").html('');
          console.log(dat);
          $("#array").append('<p>' + dat + '</p>');
        },
@@ -97,22 +109,28 @@ $("#getArrayDef").one('click', function() {
 </br>
 
 	<button id="getStringDef">String</button>
-	<div id="string"> </div>
+	<div id="string"></div>
+	<div id="loaderS"></div>
 	</br>
 	<button id="getCharDef">Char</button>
 	<div id="char"> </div>
+	<div id="loaderC"></div>
 	</br>
 	<button id="getIntDef">Int</button>
 	<div id="int"> </div>
+	<div id="loaderI"></div>
         </br>
 	<button id="getFloatDef">Float</button>
 	<div id="float"> </div>
+	<div id="loaderF"></div>
         </br>
 	<button id="getBoolDef">Boolean</button>
 	<div id="bool"> </div>
+	<div id="loaderB"></div>
 	</br>
 	<button id="getArrayDef">Array</button>
 	<div id="array"> </div>
+	<div id="loaderA"></div>
 	</br>
 	</br>
 	</br>
