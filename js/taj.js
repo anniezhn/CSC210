@@ -1,7 +1,7 @@
 function assert(cond) {
     if (!cond) {
         alert("Something went wrong.");
-        console.log("Something went wrong.");
+        throw new Error("Something went wrong.");
     }
 }
 
