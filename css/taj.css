@@ -133,9 +133,9 @@ input[type='submit'] {
 
 .definition > img {
     position: absolute;
-    margin: 0 auto;
     top: 50%;
-    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* text styles */
