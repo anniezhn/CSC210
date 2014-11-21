@@ -1,5 +1,6 @@
 $(document).ready(function($) {
-$("#getStringDef").one('click', function() {
+$("#getStringDef").on('click', function() {
+    $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-string.py",
        type: "GET",
@@ -11,7 +12,8 @@ $("#getStringDef").one('click', function() {
        },
     });
   });
-$("#getCharDef").one('click', function() {
+$("#getCharDef").on('click', function() {
+    $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-char.py",
        type: "GET",
@@ -23,7 +25,8 @@ $("#getCharDef").one('click', function() {
        },
     });
   });
-$("#getIntDef").one('click', function() {
+$("#getIntDef").on('click', function() {
+    $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-int.py",
        type: "GET",
@@ -35,7 +38,8 @@ $("#getIntDef").one('click', function() {
        },
     });
   });
-$("#getFloatDef").one('click', function() {
+$("#getFloatDef").on('click', function() {
+    $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-float.py",
        type: "GET",
@@ -47,7 +51,8 @@ $("#getFloatDef").one('click', function() {
        },
     });
   });
-$("#getBoolDef").one('click', function() {
+$("#getBoolDef").on('click', function() {
+    $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-bool.py",
        type: "GET",
@@ -59,7 +64,8 @@ $("#getBoolDef").one('click', function() {
        },
     });
   });
-$("#getArrayDef").one('click', function() {
+$("#getArrayDef").on('click', function() {
+    $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({
        url: "cgi-bin/basics1/basics1-array.py",
        type: "GET",

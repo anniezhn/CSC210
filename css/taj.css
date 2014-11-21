@@ -122,12 +122,20 @@ input[type='submit'] {
 }
 
 .definition {
+    position: relative;
     width: 47.6em;
     height: 7em;
     margin: 0;
     padding: 0.5em;
     clear: both;
     border: 1px solid black;
+}
+
+.definition > img {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 /* text styles */
