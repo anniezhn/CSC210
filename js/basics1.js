@@ -1,4 +1,14 @@
 $(document).ready(function($) {
+$("#themeChoice").on("change", function (event) {
+    $(".defTab").removeAttr("style");
+});
+$(".defTab").on("click", function (event) {
+    var bgColor = $("body").css("background-color"),
+        textColor = $("body").css("color");
+    $(".defTab").removeAttr("style");
+    $(this).css("background-color", textColor);
+    $(this).css("color", bgColor);
+});
 $("#getStringDef").on('click', function() {
     $(".definition").html('<img src="images/loading.gif" />');
     $.ajax({

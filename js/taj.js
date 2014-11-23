@@ -47,6 +47,6 @@ jQuery(document).ready(function ($) {
         path = "css/" + $(this).val() + ".css";
       }
       localStorage.setItem("themePath", path);
-      $("#themeLink").attr("href", path)
+      $("#themeLink").attr("href", path);
     });
 });
