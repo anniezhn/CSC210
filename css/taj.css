@@ -73,7 +73,7 @@ input[type='submit'] {
 .nav {
     position: relative;
     height: 3em;
-    width: 50%;
+    width: 75%;
     top: -3em;
     left: 50%;
     border: 1px solid #000;
@@ -90,15 +90,22 @@ input[type='submit'] {
 
 .delete {
     position: absolute;
-    right: 5em;
+    right: 6em;
     top: 50%;
     transform: translate(0, -50%);
     margin: 0;
 }
 
-#theme {
+.change {
     position: absolute;
     right: 17em;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+}
+#theme {
+    position: absolute;
+    right: 31em;
     top: 50%;
     transform: translate(0, -50%);
     margin: 0;
