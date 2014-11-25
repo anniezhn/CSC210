@@ -119,8 +119,8 @@ $('.answers li input').click(function() {
     
     $.post("../cgi-bin/basics1/quiz1.py", 
     	{score: score},
-    	function(data){
-    		console.log(data);
+    	function(){
+    		console.log(score);
     	});
 });
 
