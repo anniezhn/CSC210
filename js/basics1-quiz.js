@@ -1,3 +1,8 @@
+// Much of this code was taken from
+// http://code.tutsplus.com/tutorials/build-a-spiffy-quiz-engine--net-20185
+// a tutorial to make quizzes
+// it was modified to our quiz/lesson
+
 $(function(){
 	var progress = $('#progress'),
     progressKeeper = $('#progressKeeper'),
@@ -24,8 +29,8 @@ $(function(){
         else if (score>50) returnString = "Acceptable. For a muggle."
         else if (score>35) returnString = "Well, that was poor."
         else if (score>20) returnString = "Dreadful!"
-        else returnString = "For shame, troll!"
-    return returnString;
+        else returnString = "Maybe you should read over the variable definitions again."
+    return returnString;s
 	}
 
 	function checkAnswers() {
