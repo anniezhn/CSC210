@@ -3,8 +3,14 @@ body {
   color: #fff;
   font-family: Arial, Verdana, Sans-Serif;
 }
-.nav, .defTab, .definition, #condExercises {
+
+.nav, .defTab, .definition, #condExercises, #x1 {
   border-color: #fff;
+}
+
+.xChoice {
+  background-color: #fff;
+  color: #000;
 }
 
 #question{

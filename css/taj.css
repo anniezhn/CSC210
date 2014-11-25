@@ -173,6 +173,37 @@ input[type='submit'] {
   border: 1px solid #000;
 }
 
+#cond1 {
+  height: 3em;
+  clear: both;
+}
+
+.choices {
+  clear: both;
+}
+
+#x1, #compare1 {
+  height: 3em;
+  float: left;
+  line-height: 3em;
+}
+
+#x1 {
+  width: 3em;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.xChoice {
+  width: 2em;
+  height: 2em;
+  float: left;
+  line-height: 2em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
 /* text styles */
 .b {
   font-weight: bold;
