@@ -92,14 +92,14 @@ $('.btnShowResult').click(function(){
               trueCount = 0,
               answerKey = ' Answers <br />',
               score;
-
-
 		for (var i = 0, ii = results.length; i < ii; i++){
     if (results[i] == true) trueCount++;
     resultSet += '<div class="resultRow"> Question #' + (i + 1) + (results[i]== true ? "<div class='correct'><span>Correct</span></div>": "<div class='wrong'><span>Wrong</span></div>") + "</div>";
     answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
+    
 }
-	score =  roundReloaded(trueCount / questionLength*100, 2);
+
+score =  roundReloaded(trueCount / questionLength*100, 2);
 
 
 answerKey = "<div id='answer-key'>" + answerKey + "</div>";
@@ -116,6 +116,12 @@ $("#main-quiz-holder input:radio").attr("checked", false);
 $('.answers li input').click(function() {
     $(this).parents('.answers').children('li').removeClass("selected");
     $(this).parents('li').addClass('selected');
+    
+    $.post("../cgi-bin/basics1/quiz1.py", 
+    	{score: score},
+    	function(data){
+    		console.log(data);
+    	});
 });
 
 });
