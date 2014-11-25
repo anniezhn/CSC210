@@ -1,6 +1,6 @@
 (function () {
     jQuery.ajax({
-        url: "http://tnichols.rochestercs.org/cgi-bin/loginCheck.py",
+        url: "cgi-bin/loginCheck.py",
         method: "GET",
         async: false,
         dataType: "text",

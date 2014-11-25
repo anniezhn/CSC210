@@ -1,9 +1,28 @@
+function assert(cond) {
+    if (!cond) {
+        alert("Something went wrong.");
+        throw new Error("Something went wrong.");
+    }
+}
+
 jQuery(document).ready(function ($) {
+    var loadHome = function() {
+        $.ajax({
+        url: "main.html",
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function(dat) {
+          $("#dynamic").html(dat);
+        }
+      });
+    }
+    loadHome();
     $("#userID").text($.cookie("user"));
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
 
-    $("#dynamic").one("click", "#basics1", function () {
+    $("#dynamic").on("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",
           type: "GET",
@@ -14,7 +33,7 @@ jQuery(document).ready(function ($) {
           }
         });
     });
-    $("#dynamic").one("click", "#basics1-quiz", function () {
+    $("#dynamic").on("click", "#basics1-quiz", function () {
         $.ajax({
           url: "basics1-quiz.html",
           type: "GET",
@@ -24,6 +43,17 @@ jQuery(document).ready(function ($) {
             $("#dynamic").html(dat);
           }
         });
+    });
+    $("#dynamic").on("click", "#conditionals", function (event) {
+      $.ajax({
+        url: "conditionals.html",
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function(dat) {
+          $("#dynamic").html(dat);
+        }
+      });
     });
 
     $("#deleteB").click(function (event) {
@@ -40,6 +70,10 @@ jQuery(document).ready(function ($) {
         path = "css/" + $(this).val() + ".css";
       }
       localStorage.setItem("themePath", path);
-      $("#themeLink").attr("href", path)
+      $("#themeLink").attr("href", path);
+    });
+
+    $("#returnHome").on("click", function (event) {
+      loadHome();
     });
 });
