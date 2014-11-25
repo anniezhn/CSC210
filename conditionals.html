@@ -2,14 +2,28 @@
 <div id="conditionalDef">
   <p>
     When programming, it can be helpful to have something that lets a program decide on a course of action based upon
-    user input or some other criteria. For example, say you want to add numbers onto a running total but only if the number
+    user input or some other criteria. For example, say you want to add numbers onto a running total, but only if the number
     entered is greater than 5.
   </p>
   <p>
-    This is where <span class="b">conditionals</span> come in. Conditionals evaluate the truth of a statement. For example, x > 5. If x is greater
+    This is where <span class="b">conditionals</span> come in. Conditionals evaluate the truth of a statement. For example, let's think about the statement "x > 5". If x is greater
     than 5, meaning the statement is <span class="b">true</span>, the statement(s) after the conditional is executed. If x is less than or
     equal to 5, then the statement is <span class="b">false</span> and the statement(s) after the conditional is skipped over.
   </p>
+  <p>
+  In most programming languages, we write conditionals in a form similar to this: <br /> <br />
+  <b>if</b> <i>statement1</i><br />
+  <b>then</b> action1<br />
+  <b>else if</b> <i>statement2</i><br />
+  <b>then</b> action2<br />
+  else
+  <b>action3</b><br /><br />
+
+In this case, your program will perform action1 when statement1 is true. If statement1 isn't true, then your program will perform action2 if statement2 is true and action3 otherwise.</p>
+
+<p>Remember that statements look like the example we did above: stuff like "x > 5", "number of people > number of cars", and "my name is longer than your name".</p>
+
+<p>You can have conditionals which look a little different than the example above. If you don't want to do anything if a statement is false, you could just have an if check without any else's. And you can have any number of "else if" statements (or none at all) to handle any number of different cases.</p>
 </div>
 <div id="condExercises">
   <div id="cond1" class="noDisplay">
