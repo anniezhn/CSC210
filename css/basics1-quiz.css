@@ -1,3 +1,8 @@
+/*
+* This quiz format was largely taken from
+* http://code.tutsplus.com/tutorials/build-a-spiffy-quiz-engine--net-20185
+* a tutorial for making quizzes
+*/
 #main-quiz-holder { 
     color: #000;
     margin: 0 auto; 
