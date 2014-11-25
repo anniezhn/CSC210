@@ -4,6 +4,6 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.nav, .defTab, .definition {
+.nav, .defTab, .definition, #condExercises {
   border-color: #0f0;
 }

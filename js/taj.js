@@ -6,6 +6,18 @@ function assert(cond) {
 }
 
 jQuery(document).ready(function ($) {
+    var loadHome = function() {
+        $.ajax({
+        url: "main.html",
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function(dat) {
+          $("#dynamic").html(dat);
+        }
+      });
+    }
+    loadHome();
     $("#userID").text($.cookie("user"));
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
@@ -32,6 +44,17 @@ jQuery(document).ready(function ($) {
           }
         });
     });
+    $("#dynamic").on("click", "#conditionals", function (event) {
+      $.ajax({
+        url: "conditionals.html",
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function(dat) {
+          $("#dynamic").html(dat);
+        }
+      });
+    });
 
     $("#deleteB").click(function (event) {
       var msg = "This will delete your account.\n\n";
@@ -48,5 +71,9 @@ jQuery(document).ready(function ($) {
       }
       localStorage.setItem("themePath", path);
       $("#themeLink").attr("href", path);
+    });
+
+    $("#returnHome").on("click", function (event) {
+      loadHome();
     });
 });
