@@ -119,6 +119,17 @@ input[type='submit'] {
     margin: 0;
 }
 
+/* changePassword */
+#changePasswordButton {
+    position: relative;
+    top: 4em;
+}
+
+.goback {
+    position: relative;
+    top: 4em;
+}
+
 /* basics1 */
 .defContainer {
     position: relative;
