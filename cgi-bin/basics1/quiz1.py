@@ -5,14 +5,24 @@ import sys
 import cgitb
 import MyQSQLdb as mdb
 
+#catch Python errors
+cgitb.enable() 
 
-cgitb.enable() #catch Python errors
 # Connect Python and MySQL
 conn = mdb.connect('localhost', 'tnichol1', 'TeamTAJ2!', 'tnichol1_CSC210') #connect to MySQL
 cur = conn.cursor()
 
+# Get username from cookie
+cookie = os.environ.get('HTTP_COOKIE')
+# Get score from POST
+score = form['score'].value
+
+username = cookie['user']
 try:
-	
+	if cur.execute('select UserID from Users where Username=%s;', username) != 0:
+ 		cur.execute("select UserID from Users where Username=%s", (uname))
+   		userID = int(cur.fetchone()[0]) #fetchone returns tuple and we want just 1st value
+		cur.execute("insert into Quiz1 (UserID, Quiz1) values(%s,%s);", (UserID, score))
 
 except mbd.Error, e:
 	print 'Content-type: text/html'
