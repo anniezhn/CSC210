@@ -19,7 +19,6 @@ username = cookie['user']
 cur.execute('select UserID from Users where Username=%s;', username)
 result = cur.fetchone()
 
-try:
 	if result is not None: # The username exists (which it should! but just to be sure)
    		userID = result[0]
    		cur.execute('select Score1 from Quiz1 where UserID=%s',userID)
@@ -32,13 +31,11 @@ try:
 			print 'Content-type: text/plain'
 			print
 			print "You have not passed the first lesson yet"
-			print '</body>'
 
-except mbd.Error, e:
-	print 'Content-type: text/plain'
-	print
-	print "Error %d: %s" % (e.args[0], e.args[1])
-	sys.exit(1)
-finally:
-	if conn:
-		conn.close()
+	except mbd.Error, e:
+		print 'Content-type: text/plain'
+		print
+		print "Error %d: %s" % (e.args[0], e.args[1])
+		sys.exit(1)
+
+conn.close()
