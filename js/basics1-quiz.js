@@ -98,13 +98,6 @@ $('.btnShowResult').click(function(){
     	answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
     	}
     score =  roundReloaded(trueCount / questionLength*100, 2);
-    // Add quiz score to database
-    	$.post("../cgi-bin/basics1/quiz1.py", 
-    		{score: score
-    			},
-    		function(dat, status){
-    			console.log("Data:" + dat + "\nStatus:" + status);
-    		});
     });
 
 
@@ -128,7 +121,13 @@ $('.answers li input').click(function() {
 });
 
 
-
+    // Add quiz score to database
+    	$.post("../cgi-bin/basics1/quiz1.py", 
+    		{score: score
+    			},
+    		function(dat, status){
+    			console.log("Data:" + dat + "\nStatus:" + status);
+    		});
 
 
 });
