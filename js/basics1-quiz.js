@@ -98,27 +98,22 @@ $('.btnShowResult').click(function(){
     	answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
     	}
     score =  roundReloaded(trueCount / questionLength*100, 2);
-});
 
-
-
-answerKey = "<div id='answer-key'>" + answerKey + "</div>";
-resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey;
-$('#resultKeeper').html(resultSet).show();
-     $(this).parents('.questionContainer').fadeOut(500, function(){
+	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
+	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey;
+	$('#resultKeeper').html(resultSet).show();
+    	 $(this).parents('.questionContainer').fadeOut(500, function(){
     $(this).next().fadeIn(500);
-});
-return false;
+	});
+	return false;
 
-progressKeeper.hide();
-notice.hide();
-$("#main-quiz-holder input:radio").attr("checked", false);
-$('.answers li input').click(function() {
-    $(this).parents('.answers').children('li').removeClass("selected");
-    $(this).parents('li').addClass('selected');
-    
-
-});
+	progressKeeper.hide();
+	notice.hide();
+	$("#main-quiz-holder input:radio").attr("checked", false);
+	$('.answers li input').click(function() {
+  	  $(this).parents('.answers').children('li').removeClass("selected");
+    	$(this).parents('li').addClass('selected');
+	});
 /*
     // Add quiz score to database
     	$.post("../cgi-bin/basics1/quiz1.py", 
@@ -129,4 +124,5 @@ $('.answers li input').click(function() {
     		});
 */
 
+	});
 });
