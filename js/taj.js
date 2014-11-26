@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
 
-/*	// Add quiz score and say something 
+	// Add quiz score and say something 
 	// if they have or haven't taken the lesson yet
 	var loadQuiz = function() {
 		$.ajax({
@@ -38,7 +38,6 @@ jQuery(document).ready(function ($) {
 		});	
 	}
 	loadQuiz();
-	*/
 	
 	
     $("#dynamic").on("click", "#basics1", function () {
