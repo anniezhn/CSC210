@@ -24,7 +24,6 @@ try:
    		userID = result[0]
    		cur.execute('select Score1 from Quiz1 where UserID=%s',userID)
 		score1 = str(cur.fetchone()[0])
-		
 		if score1 != Null: #if there is a quiz grade in the database.
 			print 'Content-type: text/html'
 			print
