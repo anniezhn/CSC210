@@ -27,9 +27,9 @@ jQuery(document).ready(function ($) {
 	// if they have or haven't taken the lesson yet
 	var loadQuiz = function() {
 		$.ajax({
-		url: "/cgi-bin/quiz1-display.py",
+		url: "cgi-bin/quiz1-display.py",
 		type: "GET",
-		dataType: "html",
+		dataType: "text",
 		cache: false,
 		success: function(dat){
 			console.log(dat),
