@@ -18,14 +18,8 @@ jQuery(document).ready(function ($) {
       });
     }
     
-    loadHome();
-    $("#userID").text($.cookie("user"));
-    $("#themeLink").attr("href", localStorage.getItem("themePath"));
-    $("#themeChoice").val(localStorage.getItem("themeName"));
-
-	// Add quiz score and say something 
-	// if they have or haven't taken the lesson yet
-	var loadQuiz = function() {
+    // Check if the user has taken Quiz 1 yet
+    var loadQuiz = function() {
 		$.ajax({
 		url: "cgi-bin/quiz1-display.py",
 		type: "GET",
@@ -37,6 +31,12 @@ jQuery(document).ready(function ($) {
 			}
 		});	
 	}
+	
+	
+    loadHome();
+    $("#userID").text($.cookie("user"));
+    $("#themeLink").attr("href", localStorage.getItem("themePath"));
+    $("#themeChoice").val(localStorage.getItem("themeName"));
 	loadQuiz();
 	
 	
