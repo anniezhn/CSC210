@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
 		cache: false,
 		success: function(dat){
 			console.log(dat),
-			$("#basics1score").html(dat);
+			$("#basics1score").append(dat);
 			}
 		});	
 	}
