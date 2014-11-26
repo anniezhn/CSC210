@@ -4,6 +4,11 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.nav, .defTab, .definition, #condExercises {
+.nav, .defTab, .definition, #condExercises, #x1 {
   border-color: #e6e600;
+}
+
+.x1Choice {
+  background-color: #e6e600;
+  color: #000;
 }

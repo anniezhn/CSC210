@@ -119,6 +119,17 @@ input[type='submit'] {
     margin: 0;
 }
 
+/* changePassword */
+#changePasswordButton {
+    position: relative;
+    top: 4em;
+}
+
+.goback {
+    position: relative;
+    top: 4em;
+}
+
 /* basics1 */
 .defContainer {
     position: relative;
@@ -160,6 +171,51 @@ input[type='submit'] {
   height: 400px;
   margin: 0 auto;
   border: 1px solid #000;
+}
+
+#ex1, #ex2, #ex3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#cond1 {
+  height: 3em;
+  clear: both;
+}
+
+.choices {
+  clear: both;
+}
+
+#x1, #compare1 {
+  height: 3em;
+  float: left;
+  line-height: 3em;
+}
+
+#x1 {
+  width: 3em;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.x1Choice {
+  width: 2em;
+  height: 2em;
+  float: left;
+  line-height: 2em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.condResult {
+  clear: both;
+  position: relative;
+  top: 10em;
+  margin-top: 2em;
 }
 
 /* text styles */
