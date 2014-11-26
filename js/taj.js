@@ -17,11 +17,29 @@ jQuery(document).ready(function ($) {
         }
       });
     }
+    
     loadHome();
     $("#userID").text($.cookie("user"));
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
 
+	// Add quiz score and say something 
+	// if they have or haven't taken the lesson yet
+	var loadQuiz = function() {
+		$.ajax({
+		url: "/cgi-bin/quiz1-display.py",
+		type: "GET",
+		dataType: "html",
+		cache: false,
+		success: function(dat){
+			console.log(dat),
+			$("#basics1score").html(dat);
+			}
+		});	
+	}
+	loadQuiz();
+	
+	
     $("#dynamic").on("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",

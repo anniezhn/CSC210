@@ -97,6 +97,13 @@ $('.btnShowResult').click(function(){
     resultSet += '<div class="resultRow"> Question #' + (i + 1) + (results[i]== true ? "<div class='correct'><span>Correct</span></div>": "<div class='wrong'><span>Wrong</span></div>") + "</div>";
     answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
     
+    // Add quiz score to database
+    	$.post("../cgi-bin/basics1/quiz1.py", 
+    		{score: score},
+    		function(){
+    			console.log(score);
+    		});
+		});
 }
 
 score =  roundReloaded(trueCount / questionLength*100, 2);
@@ -117,12 +124,6 @@ $('.answers li input').click(function() {
     $(this).parents('.answers').children('li').removeClass("selected");
     $(this).parents('li').addClass('selected');
     
-    $.post("../cgi-bin/basics1/quiz1.py", 
-    	{score: score},
-    	function(){
-    		console.log(score);
-    	});
-});
 
 });
 

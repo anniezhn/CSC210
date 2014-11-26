@@ -22,6 +22,12 @@ try:
 	if cur.execute('select UserID from Users where Username=%s;', username) != 0:
  		cur.execute("select UserID from Users where Username=%s", (uname))
    		userID = int(cur.fetchone()[0]) #fetchone returns tuple and we want just 1st value
+   		if cur.execute("select Quiz1 (UserID, Quiz1) values(%s,%s)", (UserID, score)) != null:
+   			print 'Content-type: text/html'
+   			print
+   			print '<html>'
+   			print '<body>'
+   			print 
 		cur.execute("insert into Quiz1 (UserID, Quiz1) values(%s,%s);", (UserID, score))
 
 except mbd.Error, e:
