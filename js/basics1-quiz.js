@@ -120,7 +120,7 @@ $('.answers li input').click(function() {
 
 });
 
-
+/*
     // Add quiz score to database
     	$.post("../cgi-bin/basics1/quiz1.py", 
     		{score: score
@@ -128,6 +128,6 @@ $('.answers li input').click(function() {
     		function(dat, status){
     			console.log("Data:" + dat + "\nStatus:" + status);
     		});
-
+*/
 
 });
