@@ -20,26 +20,26 @@ jQuery(document).ready(function ($) {
     
     // Check if the user has taken Quiz 1 yet
     var loadQuiz = function() {
-		$.ajax({
-		url: "cgi-bin/quiz1-display.py",
-		type: "GET",
-		dataType: "text",
-		cache: false,
-		success: function(dat){
-			console.log(dat),
-			$("#basics1score").append(dat);
-			}
-		});	
-	}
-	
-	
+    $.ajax({
+    url: "cgi-bin/quiz1-display.py",
+    type: "GET",
+    dataType: "text",
+    cache: false,
+    success: function(dat){
+      console.log(dat),
+      $("#basics1score").append(dat);
+      }
+    }); 
+  }
+  
+  
     loadHome();
     $("#userID").text($.cookie("user"));
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
-	loadQuiz();
-	
-	
+  loadQuiz();
+  
+  
     $("#dynamic").on("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",
@@ -65,6 +65,18 @@ jQuery(document).ready(function ($) {
     $("#dynamic").on("click", "#conditionals", function (event) {
       $.ajax({
         url: "conditionals.html",
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function(dat) {
+          $("#dynamic").html(dat);
+        }
+      });
+    });
+
+    $("#dynamic").on("click", "#iteration", function (event) {
+      $.ajax({
+        url: "iteration.html",
         type: "GET",
         dataType: "html",
         cache: false,

@@ -1,0 +1,51 @@
+<div id="iterationProse">
+  <p>
+    When you're programming, there are times when you want to give a certain command to the computer more than one time. Maybe you want to print out the value of each element of an array -- remember that an array has a list of items -- or, if you're writing some code to do graphics, maybe you want to tell something on
+    the page to move in a certain direction multiple times. Obviously you don't want to type the command over and over again. That's boring, wastes screen space,
+    and you might get tired and not type the command the number of times you wanted to.
+  </p>
+  <p>
+    What if there were an easy way to tell the computer to do a command a certain number of times?
+  </p>
+  <p>
+    As a matter of fact, there is! Programmers call this important concept <span class="b">iteration</span>. You'll need to use a mix of what you remember from both giving computers commands and conditionals to use iteration. Conditionals are useful because we often want to tell the computer to do something until a conditional statement is false. For example, if we've created a quiz on addition and we're asking the user what 2 + 3 is, we might want to direct the computer
+    to print out "Try again!" until the input is equal to 5.
+  </p>
+  <p>
+  There are two main kinds of iteration. The <i>while</i> loop is the easier one to understand, and it looks like this:<br /> <br />
+  <b>while</b> <i>statement</i><br />
+  action<br />
+
+This says that while the statement isn't true, the computer should perform the action. In the addition quiz example used above, where we want the user to put in the correct answer for 2 + 3, your loop might look something like this:
+  <br /> <br />
+  <b>while</b> <i>input doesn't equal 5</i><br />
+  print "Try again!"<br />
+</p>
+
+<p>This puts together all the stuff we've learned. From the conditionals lesson, we get that this iteration, or <i>loop</i>, will keep happening until the input equals 5. From the commands lesson, we get that the print statement tells the computer to write something to your screen. And from the variable types lesson, we know that "Try again!" is a string.</p>
+
+<p>There is also a <i>for</i> loop. We've included one for loop exercise in case you want to try it, but it's a little more complex than the while loop--don't feel too bad if it confuses you!</p>
+
+<p>Here's the general <i>for</i> loop syntax:
+<b>for</b> <i>initial value</i><i>statement</i><i>what to change every time the loop runs</i><br />
+ action<br /></p>
+
+<p>So a for loop actually starts out with three parts! The first part sets some variable values to start the loop with. The second part is a conditional statement; just like in the <i>while</i> loop, the loop will repeat until this statement is false. And the third part contains changes which should happen at the end of each time the loop runs. If you're still confused, check out what printing out the numbers from 1 to 10 might look like: <br /> <br />
+  <b>for</b> <i>i = 1, </i>i < 11,<i> </i> add 1 to i<br />
+ print i<br /></p>
+
+<p>Look closely at this loop. We start the loop by making i equal to 1, and we're only going to stop when i isn't less than 11. So this will print out the numbers from 1 to 10 because the computer will first print i, then increase the value of i by 1, and then print out i if the new value is still less than 11. The loop will stop itself once it sees that i is less than 11. Otherwise, we would just print out numbers forever!</p>
+
+<p>Iteration is a little tricky to get used to, but can be very useful. You can practice on the examples below!</p>
+</div>
+<div id="iterationExercises">
+  <div id="iteration1" class="noDisplay">
+
+  </div>
+  <div id="iteration2" class="noDisplay">
+
+  </div>
+  <div id="iteration3" class="noDisplay">
+
+  </div>
+</div>
