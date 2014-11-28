@@ -62,6 +62,19 @@ jQuery(document).ready(function ($) {
           }
         });
     });
+
+     $("#dynamic").on("click", "#commands", function (event) {
+      $.ajax({
+        url: "commands.html",
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function(dat) {
+          $("#dynamic").html(dat);
+        }
+      });
+    });
+
     $("#dynamic").on("click", "#conditionals", function (event) {
       $.ajax({
         url: "conditionals.html",
