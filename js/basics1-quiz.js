@@ -80,24 +80,6 @@ $(function(){
 
 
 $('.btnShowResult').click(function(){
-	var postScore = function() {
-		$.ajax({
-			url: "cgi-bin/basics1/quiz1.py",
-			type: "POST",
-			data{
-				score1: score
-				},
-			dataType: "json",
-			success: function() {
-				console.log("success with post for Quiz1!");
-			},
-			error: function (jqXHR, errorStatus, errorString) {
-        	console.log(jqXHR);
-        	console.log(errorStatus);
-        	console.log(errorString);
-			}
-		});
-	}
 	var tempCheck = $(this).parents('.questionContainer').find('input[type=radio]:checked');
 	if (tempCheck.length == 0) {
     	 notice.fadeIn(300);return false;
@@ -134,8 +116,27 @@ $('.btnShowResult').click(function(){
   	  $(this).parents('.answers').children('li').removeClass("selected");
     	$(this).parents('li').addClass('selected');
 	});
+	/*
+		var postScore = function() {
+		$.ajax({
+			url: "cgi-bin/basics1/quiz1.py",
+			type: "POST",
+			data{
+				score1: score
+				},
+			dataType: "json",
+			success: function() {
+				console.log("success with post for Quiz1!");
+			},
+			error: function (jqXHR, errorStatus, errorString) {
+        	console.log(jqXHR);
+        	console.log(errorStatus);
+        	console.log(errorString);
+			}
+		});
+	}
+	*/
 
-	//postScore();
 	});
 	
 	
