@@ -116,7 +116,7 @@ $('.btnShowResult').click(function(){
 	});
 	
 	$.ajax({
-		url: "cgi-bin/basics1/quiz1/py",
+		url: "cgi-bin/basics1/quiz1.py",
 		type: "POST",
 		data{
 			score1: score
@@ -132,6 +132,8 @@ $('.btnShowResult').click(function(){
         console.log(errorString);
 		}
 		});
-		
+	
 	});
+	
+	
 });
