@@ -26,9 +26,13 @@ try:
 		cur.execute('select Score1 from Quiz1 where UserID=%s',userID)
 		score1 = str(cur.fetchone()[0])
 			if score1 != Null:
-				cur.execute('update Quiz1 set Quiz1=%s where UserID=%s',(score, userID))
+				cur.execute('update Users set Quiz1=%s where UserID=%s',(score, userID))
+				conn.commit()
 			else:
 				cur.execute("insert into Quiz1 (UserID, Quiz1) values(%s,%s);", (UserID, score))
+				conn.commit()
+	else:
+		sys.exit(1)
 
 except mbd.Error, e:
 	print 'Content-type: text/html'
