@@ -51,6 +51,7 @@ jQuery(document).ready(function ($) {
           }
         });
     });
+    
     $("#dynamic").on("click", "#basics1-quiz", function () {
         $.ajax({
           url: "basics1-quiz.html",
