@@ -25,7 +25,7 @@ try:
 		userID = result[0]
 		cur.execute('select Score1 from Quiz1 where UserID=%s',userID)
 		score1 = str(cur.fetchone()[0])
-			if score1 != Null:
+			if score1 != null:
 				cur.execute('update Users set Quiz1=%s where UserID=%s',(score, userID))
 				conn.commit()
 			else:
