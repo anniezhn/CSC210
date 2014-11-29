@@ -114,15 +114,24 @@ $('.btnShowResult').click(function(){
   	  $(this).parents('.answers').children('li').removeClass("selected");
     	$(this).parents('li').addClass('selected');
 	});
-/*
-    // Add quiz score to database
-    	$.post("../cgi-bin/basics1/quiz1.py", 
-    		{score1: score
-    			},
-    		function(dat, status){
-    			console.log("Data:" + dat + "\nStatus:" + status);
-    		});
-*/
-
+	
+	$.ajax({
+		url: "cgi-bin/basics1/quiz1/py",
+		type: "POST",
+		data{
+			score1: score
+			},
+		dataType: "json",
+		
+		success: function(data) {
+			console.log(data);
+		},
+		error: function (jqXHR, errorStatus, errorString) {
+        console.log(jqXHR);
+        console.log(errorStatus);
+        console.log(errorString);
+		}
 		});
+		
+	});
 });
