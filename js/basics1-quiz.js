@@ -48,7 +48,7 @@ $(function(){
     	return resultArr;
 	}
 	
-	function postScore(){
+	var postScore = function() {
 		$.ajax({
 			url: "cgi-bin/basics1/quiz1.py",
 			type: "POST",
@@ -134,7 +134,7 @@ $('.btnShowResult').click(function(){
     	$(this).parents('li').addClass('selected');
 	});
 
-	postScore();
+	//postScore();
 	});
 	
 	
