@@ -124,5 +124,5 @@ $('.btnShowResult').click(function(){
     		});
 */
 
-	});
+		});
 });
