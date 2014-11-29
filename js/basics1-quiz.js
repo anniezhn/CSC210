@@ -47,6 +47,25 @@ $(function(){
     	}
     	return resultArr;
 	}
+	
+	function postScore(){
+		$.ajax({
+			url: "cgi-bin/basics1/quiz1.py",
+			type: "POST",
+			data{
+				score1: score
+				},
+			dataType: "json",
+			success: function() {
+				console.log("success with post for Quiz1!");
+			},
+			error: function (jqXHR, errorStatus, errorString) {
+        	console.log(jqXHR);
+        	console.log(errorStatus);
+        	console.log(errorString);
+			}
+		});
+	}
 
 	$('.btnStart').click(function(){
    	 $(this).parents('.questionContainer').fadeOut(500, function(){
@@ -114,25 +133,8 @@ $('.btnShowResult').click(function(){
   	  $(this).parents('.answers').children('li').removeClass("selected");
     	$(this).parents('li').addClass('selected');
 	});
-	
-	$.ajax({
-		url: "cgi-bin/basics1/quiz1.py",
-		type: "POST",
-		data{
-			score1: score
-			},
-		dataType: "json",
-		
-		success: function(data) {
-			console.log(data);
-		},
-		error: function (jqXHR, errorStatus, errorString) {
-        console.log(jqXHR);
-        console.log(errorStatus);
-        console.log(errorString);
-		}
-		});
-	
+
+	postScore();
 	});
 	
 	
