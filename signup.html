@@ -3,6 +3,16 @@
 <head>
 	<title>TAJ Signup</title>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+      $(document).ready(function() {
+        if ($.cookie('user'))
+        {
+          console.log("ready");
+          window.location.replace("http://tnichols.rochestercs.org/homepage.html");
+        }
+      })
+    </script>
 	<script src="js/signup.js"></script>
 	<link href="css/taj.css" rel="stylesheet" type="text/css"/>
 </head>
