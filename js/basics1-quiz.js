@@ -130,7 +130,7 @@ $('.btnShowResult').click(function(){
 			dataType: "text",
 			success: function() {
 				console.log("success with post for Quiz1!"),
-				$('#subScoreButton').html(Saved Score!);
+				$("#subScoreButton").html(Saved Score!);
 			},
 		});
 		
