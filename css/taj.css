@@ -228,8 +228,8 @@ input[type='submit'] {
 }
 
 #effect { 
-	width: 20px;
-  	height: 10px;
+	width: 100px;
+  	height: 50px;
   	float: left;
   	line-height: 4em;
   	text-align: center;
