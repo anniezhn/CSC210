@@ -107,7 +107,7 @@ $('.btnShowResult').click(function(){
 	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
 	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + 
 		' You scored '+score+'%</h2>' + resultSet + answerKey
-		+ '<button type="button" id="submitScore" value ="" + score>Submit your score</button>'
+		+ '<button type="button" id="submitScore" value ="" + score>Submit your score</button>';
 	$('#resultKeeper').html(resultSet).show();
     	 $(this).parents('.questionContainer').fadeOut(500, function(){
     $(this).next().fadeIn(500);
@@ -124,8 +124,7 @@ $('.btnShowResult').click(function(){
 });
 	
 	    $("#resultKeeper").on("click", "#submitScore", function () {
-	    
-        $.ajax({
+        /*$.ajax({
 			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
 			data{
@@ -135,12 +134,8 @@ $('.btnShowResult').click(function(){
 			success: function() {
 				console.log("success with post for Quiz1!");
 			},
-			error: function (jqXHR, errorStatus, errorString) {
-        	console.log(jqXHR);
-        	console.log(errorStatus);
-        	console.log(errorString);
-			}
 		});
+		*/
 	});	
 	
 });
