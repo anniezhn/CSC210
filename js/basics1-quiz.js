@@ -15,7 +15,7 @@ $(function(){
     	questionLength= answers.length,
     	questionsStatus = $("#questionNumber"),
     	questionsList = $(".question"),
-    	score1 = "";
+    	qscore1 = "";
 
 // The tutorial made own rounding method
     function roundReloaded(num, dec) {
@@ -32,7 +32,7 @@ $(function(){
         	else if (score>35) returnString = "Well, that was poor."
         	else if (score>20) returnString = "Dreadful!"
         	else returnString = "Maybe you should read over the variable definitions again."
-    	return returnString;s
+    	return returnString;
 	}
 
 	function checkAnswers() {
@@ -102,7 +102,7 @@ $('.btnShowResult').click(function(){
     	answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
     	}
     score = roundReloaded(trueCount / questionLength*100, 2);
-    score1 += score;
+    qscore1 += score;
 
 	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
 	// Added a button to submit your score and add it to your 
@@ -126,8 +126,8 @@ $('.btnShowResult').click(function(){
       	  $.ajax({
 			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
-			data: "quiz1score="+score1,
-			dataType: "text",
+			data: "quiz1score="+qscore1,
+			dataType: "text";
 			success: function() {
 				console.log("success with post for Quiz1!"),
 				$('#subScoreButton').html(Saved Score!);
