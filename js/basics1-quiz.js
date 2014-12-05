@@ -14,8 +14,10 @@ $(function(){
 		answerKey = "",
     	questionLength= answers.length,
     	questionsStatus = $("#questionNumber"),
-    	questionsList = $(".question");
+    	questionsList = $(".question"),
+    	score1 = "";
 
+// The tutorial made own rounding method
     function roundReloaded(num, dec) {
     	var result = Math.round(num*Math.pow(10,dec))/Math.pow(10,dec);
     	return result;
@@ -99,10 +101,13 @@ $('.btnShowResult').click(function(){
     	resultSet += '<div class="resultRow"> Question #' + (i + 1) + (results[i]== true ? "<div class='correct'><span>Correct</span></div>": "<div class='wrong'><span>Wrong</span></div>") + "</div>";
     	answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
     	}
-    score =  roundReloaded(trueCount / questionLength*100, 2);
+    score = roundReloaded(trueCount / questionLength*100, 2);
+    score1 = "" + score;
 
 	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
-	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey;
+	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + 
+		' You scored '+score+'%</h2>' + resultSet + answerKey
+		+ '<button type="button" id="submitScore" value ="" + score>Submit your score</button>'
 	$('#resultKeeper').html(resultSet).show();
     	 $(this).parents('.questionContainer').fadeOut(500, function(){
     $(this).next().fadeIn(500);
@@ -116,13 +121,15 @@ $('.btnShowResult').click(function(){
   	  $(this).parents('.answers').children('li').removeClass("selected");
     	$(this).parents('li').addClass('selected');
 	});
-	/*
-		var postScore = function() {
-		$.ajax({
-			url: "cgi-bin/basics1/quiz1.py",
+});
+	
+	    $("#resultKeeper").on("click", "#submitScore", function () {
+	    
+        $.ajax({
+			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
 			data{
-				score1: score
+				score: score1
 				},
 			dataType: "json",
 			success: function() {
@@ -134,10 +141,6 @@ $('.btnShowResult').click(function(){
         	console.log(errorString);
 			}
 		});
-	}
-	*/
-
-	});
-	
+	});	
 	
 });
