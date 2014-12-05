@@ -123,7 +123,7 @@ $('.btnShowResult').click(function(){
 });
 	
 	    $("#resultKeeper").on("click", "#submitScore", function () {
-      	  $.ajax({
+      	 /* $.ajax({
 			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
 			data: "quiz1score="+qscore1,
@@ -133,7 +133,7 @@ $('.btnShowResult').click(function(){
 				$("#subScoreButton").html(<p>Saved Score!</p>);
 			},
 		});
-		
+		*/
 	});	
 	
 });
