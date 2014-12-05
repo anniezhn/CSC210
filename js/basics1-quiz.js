@@ -127,7 +127,7 @@ $('.btnShowResult').click(function(){
 			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
 			data: "quiz1score="+qscore1,
-			dataType: "text";
+			dataType: "text",
 			success: function() {
 				console.log("success with post for Quiz1!"),
 				$('#subScoreButton').html(Saved Score!);
