@@ -184,11 +184,6 @@ input[type='submit'] {
   clear: both;
 }
 
-#comm1 {
-    height: 3em;
-    clear: both;
-}
-
 .choices {
   clear: both;
 }
@@ -215,11 +210,6 @@ input[type='submit'] {
   color: #fff;
   cursor: pointer;
 }
-#effect { 
-    width: 240px; 
-    height: 135px; 
-    padding: 0.4em; 
-    position: relative; }
 
 .condResult {
   clear: both;
@@ -228,6 +218,19 @@ input[type='submit'] {
   margin-top: 2em;
 }
 
+/* Commands */
+#comm1 {
+    height: 3em;
+    clear: both;
+}
+
+#effect { 
+    width: 240px; 
+    height: 135px; 
+    padding: 0.4em; 
+    position: relative; 
+}
+    
 /* text styles */
 .b {
   font-weight: bold;
