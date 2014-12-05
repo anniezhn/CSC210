@@ -105,9 +105,7 @@ $('.btnShowResult').click(function(){
     score1 = "" + score;
 
 	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
-	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + 
-		' You scored '+score+'%</h2>' + resultSet + answerKey
-		+ '<button type="button" id="submitScore" value ="" + score>Submit your score</button>';
+	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey + '<button type="button" id="submitScore" value ="" + score>Submit your score</button>';
 	$('#resultKeeper').html(resultSet).show();
     	 $(this).parents('.questionContainer').fadeOut(500, function(){
     $(this).next().fadeIn(500);
