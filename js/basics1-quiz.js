@@ -102,7 +102,7 @@ $('.btnShowResult').click(function(){
     	answerKey += (i+1) +" : "+ answers[i] +' &nbsp;  &nbsp;  &nbsp;   ';
     	}
     score = roundReloaded(trueCount / questionLength*100, 2);
-    score1 = "" + score;
+    score1 += score;
 
 	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
 	// Added a button to submit your score and add it to your 
@@ -123,7 +123,7 @@ $('.btnShowResult').click(function(){
 });
 	
 	    $("#resultKeeper").on("click", "#submitScore", function () {
-      /*  $.ajax({
+      	  $.ajax({
 			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
 			data: "quiz1score="+score1,
@@ -133,7 +133,7 @@ $('.btnShowResult').click(function(){
 				$('#subScoreButton').html(Saved Score!);
 			},
 		});
-		*/
+		
 	});	
 	
 });
