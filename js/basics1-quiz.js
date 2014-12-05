@@ -105,7 +105,8 @@ $('.btnShowResult').click(function(){
     score1 = "" + score;
 
 	answerKey = "<div id='answer-key'>" + answerKey + "</div>";
-	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey + '<button type="button" id="submitScore" value ="" + score>Submit your score</button>';
+	// Added a button to submit your score and add it to your 
+	resultSet = '<h2 class="qTitle">' +judgeSkills(score) + ' You scored '+score+'%</h2>' + resultSet + answerKey + '<div id= "subScoreButton"><button type="button" id="submitScore" value ="" + score>Submit your score</button></div>';
 	$('#resultKeeper').html(resultSet).show();
     	 $(this).parents('.questionContainer').fadeOut(500, function(){
     $(this).next().fadeIn(500);
@@ -122,18 +123,19 @@ $('.btnShowResult').click(function(){
 });
 	
 	    $("#resultKeeper").on("click", "#submitScore", function () {
-        /*$.ajax({
+        $.ajax({
 			url: "cgi-bin/basics1/quiz1-submit.py",
 			type: "POST",
-			data{
-				score: score1
-				},
-			dataType: "json",
+			data: "quiz1score="+score1,
+			dataType: "text",
 			success: function() {
-				console.log("success with post for Quiz1!");
+				console.log("success with post for Quiz1!"),
+				$('#subScoreButton').html(Saved Score!);
+			},
+			error: function(errorThrown) {
+				console.log(errorThrown);
 			},
 		});
-		*/
 	});	
 	
 });

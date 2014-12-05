@@ -15,7 +15,7 @@ cur = conn.cursor()
 # Get username from cookie
 cookie = os.environ.get('HTTP_COOKIE')
 # Get score from POST
-score = Request.Form("score1")
+score = form['quiz1score'].value
 
 username = cookie['user']
 cur.execute('select UserID from Users where Username=%s;', username)
