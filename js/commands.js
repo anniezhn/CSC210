@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
     };
  
     $( "#run" ).click(function() {
-      $( "#effect" ).effect(bounce, {}, 500)
+      $( "#effect" ).effect(bounce, {}, 500, callback());
       return false;
     });
   
