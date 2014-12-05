@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) { 
     $( "#run" ).click(function() {
-      $( "#effect" ).effect("bounce", {times: 5}, 300);
+      $( "#effect" ).effect("shake", {times: 5}, 300);
     });
   
 
