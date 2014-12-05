@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
         }
       });
     }
-    
+  /*  
     // Check if the user has taken Quiz 1 yet
     var loadQuiz = function() {
     $.ajax({
@@ -31,13 +31,14 @@ jQuery(document).ready(function ($) {
       }
     }); 
   }
+  */
   
   
     loadHome();
     $("#userID").text($.cookie("user"));
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
-  loadQuiz();
+  	//loadQuiz();
   
   
     $("#dynamic").on("click", "#basics1", function () {
