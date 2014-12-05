@@ -228,10 +228,13 @@ input[type='submit'] {
 }
 
 #effect { 
-    width: 240px; 
-    height: 135px; 
-    padding: 0.4em; 
-    position: relative;
+	width: 300px;
+  	height: 135px;
+  	float: left;
+  	line-height: 4em;
+  	text-align: center;
+  	background-color: #000;
+  	color: #fff;
 }
 
 .toggler {
