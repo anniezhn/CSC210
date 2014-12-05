@@ -132,9 +132,6 @@ $('.btnShowResult').click(function(){
 				console.log("success with post for Quiz1!"),
 				$('#subScoreButton').html(Saved Score!);
 			},
-			error: function(errorThrown) {
-				console.log(errorThrown);
-			},
 		});
 	});	
 	
