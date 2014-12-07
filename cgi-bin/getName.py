@@ -15,10 +15,10 @@ cur.execute('select FirstName from Users where Username=%s;', username)
 result = cur.fetchone()[0]
 
 if result is not None:
-  print 'Content-type: text/plain'
+  print 'Content-type: application/json'
   print # don't forget newline
-  print str(result)
+  print '{"firstName": "' + result + '"}'
 else
-  print 'Content-type: text/plain'
+  print 'Content-type: application/json'
   print # don't forget newline
-  print str(username)
+  print '{"firstName": "' + username + '"}'
