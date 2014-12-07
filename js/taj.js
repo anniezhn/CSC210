@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
     $("#userID").text(function () {
       $.ajax({
         url: "cgi-bin/getName.py",
-        type: "GET",
+        type: "POST",
         data: { username: $.cookie("user") },
         dataType: "text",
         cache: false,
