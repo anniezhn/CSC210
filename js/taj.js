@@ -41,13 +41,12 @@ jQuery(document).ready(function ($) {
         url: "cgi-bin/getName.py",
         type: "POST",
         data: { username: $.cookie("user") },
-        dataType: "text",
+        dataType: "json",
         cache: false,
         success: function(dat) {
-          $(this).text(dat);
+          $(this).text(dat.firstName);
         },
         error: function (jqXHR, errorStatus, errorString) {
-          console.log(jqXHR);
           console.log(errorStatus);
           console.log(errorString);
         }
