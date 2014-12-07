@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
         }
       });
     }
-  /*  
+  /*
     // Check if the user has taken Quiz 1 yet
     var loadQuiz = function() {
     $.ajax({
@@ -29,18 +29,35 @@ jQuery(document).ready(function ($) {
       console.log(dat),
       $("#basics1score").append(dat);
       }
-    }); 
+    });
   }
   */
-  
-  
+
+
     loadHome();
-    $("#userID").text($.cookie("user"));
+    //$("#userID").text($.cookie("user"));
+    $("#userID").text(function () {
+      $.ajax({
+        url: "cgi-bin/getName.py",
+        type: "GET",
+        data: { username: $.cookie("user") },
+        dataType: "text",
+        cache: false,
+        success: function(dat) {
+          $(this).text(dat);
+        }
+        error: function (jqXHR, errorStatus, errorString) {
+          console.log(jqXHR);
+          console.log(errorStatus);
+          console.log(errorString);
+        }
+      });
+    });
     $("#themeLink").attr("href", localStorage.getItem("themePath"));
     $("#themeChoice").val(localStorage.getItem("themeName"));
   	//loadQuiz();
-  
-  
+
+
     $("#dynamic").on("click", "#basics1", function () {
         $.ajax({
           url: "basics1.html",
@@ -52,7 +69,7 @@ jQuery(document).ready(function ($) {
           }
         });
     });
-    
+
     $("#dynamic").on("click", "#basics1-quiz", function () {
         $.ajax({
           url: "basics1-quiz.html",
