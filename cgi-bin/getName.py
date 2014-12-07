@@ -12,7 +12,7 @@ form = cgi.FieldStorage()
 username = form['username'].value
 
 cur.execute('select FirstName from Users where Username=%s;', username)
-result = cur.fetchone()
+result = cur.fetchone()[0]
 
 if result is not None:
   print 'Content-type: text/plain'
