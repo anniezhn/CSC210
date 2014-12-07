@@ -45,7 +45,7 @@ jQuery(document).ready(function ($) {
         cache: false,
         success: function(dat) {
           $(this).text(dat);
-        }
+        },
         error: function (jqXHR, errorStatus, errorString) {
           console.log(jqXHR);
           console.log(errorStatus);
