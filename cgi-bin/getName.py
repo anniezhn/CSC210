@@ -17,8 +17,8 @@ result = cur.fetchone()[0]
 if result is not None:
   print 'Content-type: application/json'
   print # don't forget newline
-  print '{"firstName": "' + result + '"}'
+  print '{"firstName": "' + str(result) + '"}'
 else
   print 'Content-type: application/json'
   print # don't forget newline
-  print '{"firstName": "' + username + '"}'
+  print '{"firstName": "' + str(username) + '"}'
