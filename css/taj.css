@@ -189,22 +189,22 @@ input[type='submit'] {
 }
 
 #x1, #compare1 {
-  height: 3em;
+  height: 4em;
   float: left;
-  line-height: 3em;
+  line-height: 4em;
 }
 
 #x1 {
-  width: 3em;
+  width: 4em;
   border: 1px solid #000;
   text-align: center;
 }
 
 .x1Choice {
-  width: 2em;
-  height: 2em;
+  width: 2.5em;
+  height: 2.5em;
   float: left;
-  line-height: 2em;
+  line-height: 2.5em;
   text-align: center;
   background-color: #000;
   color: #fff;
@@ -227,7 +227,7 @@ input[type='submit'] {
   	border: 1px solid #000;
 }
 
-#effect { 
+#effect {
 	width: 100px;
   	height: 50px;
   	float: left;
@@ -236,7 +236,7 @@ input[type='submit'] {
   	background-color: #000;
   	color: #fff;
 }
-   
+
 /* text styles */
 .b {
   font-weight: bold;
