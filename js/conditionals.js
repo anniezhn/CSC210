@@ -21,5 +21,6 @@ jQuery(document).ready(function ($) {
       $("#ex" + next.toString()).fadeIn();
     });
     sessionStorage.setItem("exercise", next.toString());
+    $(".nextExercise").hide();
   });
 });
