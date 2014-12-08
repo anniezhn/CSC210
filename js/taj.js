@@ -37,14 +37,17 @@ jQuery(document).ready(function ($) {
     loadHome();
     //$("#userID").text($.cookie("user"));
     $("#userID").text(function () {
-      $.ajax({
+     uname = $.cookie("user"); 
+     $.ajax({
         url: "cgi-bin/getName.py",
         type: "POST",
-        data: { username: $.cookie("user") },
+        data: { username: uname },
         dataType: "json",
         cache: false,
         success: function(dat) {
-          $(this).text(dat.firstName);
+          console.dir(dat);
+          //$(this).text(dat.firstName); this wasn't working for some reason
+          $("#userID").text(dat.firstName);
         },
         error: function (jqXHR, errorStatus, errorString) {
           console.log(errorStatus);

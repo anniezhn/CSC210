@@ -14,11 +14,10 @@ username = form['username'].value
 cur.execute('select FirstName from Users where Username=%s;', username)
 result = cur.fetchone()[0]
 
-if result is not None:
-  print 'Content-type: application/json'
-  print # don't forget newline
+print 'Content-type: application/json'
+print
+print '{"firstName": "' + str(result) + '"}'
+comout = '''if result is not None:
   print '{"firstName": "' + str(result) + '"}'
 else
-  print 'Content-type: application/json'
-  print # don't forget newline
-  print '{"firstName": "' + str(username) + '"}'
+  print '{"firstName": "' + str(username) + '"}' f '''
