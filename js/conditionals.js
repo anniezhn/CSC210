@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
   $("#x1").on("dropout", function (event, ui) {
     $(".condResult").html("");
   });
-  $(".nextExercise").on("click", function (event) {
+  $(".nextExerciseB").on("click", function (event) {
     var current = parseInt(sessionStorage.getItem("exercise")),
         next = current + 1;
     console.log("current = " + current);
