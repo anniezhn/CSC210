@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
     loadHome();
     //$("#userID").text($.cookie("user"));
     $("#userID").text(function () {
-     uname = $.cookie("user"); 
+     var uname = $.cookie("user"); 
      $.ajax({
         url: "cgi-bin/getName.py",
         type: "POST",
