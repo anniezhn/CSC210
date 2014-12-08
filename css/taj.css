@@ -214,7 +214,7 @@ input[type='submit'] {
 .condResult {
   clear: both;
   position: relative;
-  bottom: 1em;
+  top: 6em;
   margin-top: 1em;
 }
 
