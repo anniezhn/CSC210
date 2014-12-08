@@ -16,7 +16,9 @@ cur = conn.cursor()
 cookie_monster['session_id'] = ""
 cookie_monster['user'] = ""
 cookie_monster['session_id']['expires']='Thu, 01 Jan 1970 00:00:00 GMT' #apparently this is the convention
+cookie_monster['session_id']['path']='/'
 cookie_monster['user']['expires']='Thu, 01 Jan 1970 00:00:00 GMT' #apparently this is the convention
+cookie_monster['user']['path']='/'
 
 #remove user from database
 cur.execute('SELECT UserID FROM Users WHERE Username=%s;', username)

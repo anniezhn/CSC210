@@ -49,9 +49,11 @@ try:
    cook1 = Cookie.SimpleCookie()
    cook1['session_id'] = session_id
    cook1['session_id']['expires']=24*60*60  #set cookie to expire in a day
+   cook1['session_id']['path']='/'  #set cookie to expire in a day
    cook2 = Cookie.SimpleCookie()
    cook2['user'] = uname
    cook2['user']['expires']=24*60*60
+   cook2['user']['path']='/'
 
    print 'Content-type: text/html'
    print cook1
