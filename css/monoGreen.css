@@ -8,7 +8,7 @@ body {
   border-color: #0f0;
 }
 
-.x1Choice {
+.x1Choice, #effect {
   background-color: #0f0;
   color: #000;
 }
