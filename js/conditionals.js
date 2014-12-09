@@ -70,8 +70,8 @@ jQuery(document).ready(function ($) {
     if (droppedXVal !== -1000 && droppedYVal !== 1000) {
       $(".condResult").html("<p>Is " + droppedXVal + " > " + compareXInt + " || " +
         droppedYVal + " < " + compareYInt + "?</p>" +
-        (droppedXVal > compareXInt && droppedYVal < compareYInt).toString()).show();
-      if (droppedXVal > compareXInt && droppedYVal < compareYInt) {
+        (droppedXVal > compareXInt || droppedYVal < compareYInt).toString()).show();
+      if (droppedXVal > compareXInt || droppedYVal < compareYInt) {
         $(".nextExercise").show();
       }
     }
