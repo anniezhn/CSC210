@@ -40,9 +40,11 @@ jQuery(document).ready(function ($) {
     if (this.id === "x3") {
       console.log("x dropped");
       droppedXVal = parseInt(ui.draggable.text());
+      console.log("x = " + droppedXVal);
     } else if (this.id === "y3") {
       console.log("y dropped");
       droppedYVal = parseInt(ui.draggable.text());
+      console.log("y = " + droppedYVal);
     }
     if (droppedXVal !== 1000 && droppedYVal !== 1000) {
       console.log("x = " + droppedXVal + " and y = " + droppedYVal);
