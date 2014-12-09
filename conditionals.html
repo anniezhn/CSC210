@@ -27,7 +27,7 @@ In this case, your program will perform action1 when statement1 is true. If stat
 </div>
 <div id="condExercises">
     <div id="ex1">
-      <h2>Exercise 1</h2>
+      <h2>Exercise 1: Basic Conditional</h2>
       <p>
         Drag a value to 'x' which causes the statement below to be true.
       </p>
@@ -44,7 +44,7 @@ In this case, your program will perform action1 when statement1 is true. If stat
       <div class="condResult"></div>
     </div>
     <div id="ex2" class="noDisplay">
-      <h2>Exercise 2</h2>
+      <h2>Exercise 2: Not</h2>
       <p>
         Conditionals can also be used to decide which path to take when something is <span class="b">not</span> true.
         <br/>
@@ -70,11 +70,11 @@ In this case, your program will perform action1 when statement1 is true. If stat
       <div class="condResult"></div>
     </div>
     <div id="ex3" class="noDisplay">
-      <h2>Exercise 3</h2>
+      <h2>Exercise 3: And</h2>
       <p>
         Sometimes you want to do something only when two items are true. You can use <span class="b">and</span> to test two conditions.
         <br/>
-        Usually double-ampersand, <span class="b">&amp;&amp;</span> is the symbol for <span class="b">and</span>. It goes between the
+        Usually double-ampersand, <span class="b">&amp;&amp;</span>, is the symbol for <span class="b">and</span>. It goes between the
         two conditions to be tested.
         <br/>
         If x is true and y is true, then the whole statement is true. But if either one is false, the whole statement is false. For example:
@@ -102,7 +102,48 @@ In this case, your program will perform action1 when statement1 is true. If stat
       <div class="condResult"></div>
     </div>
     <div id="ex4" class="noDisplay">
-      <h2>Exercise 3</h2>
+      <h2>Exercise 4: Or</h2>
+      <p>
+        Sometimes you want to do something when one of two items is true. Similar to <span class="b">and</span>,
+        you can use <span class="b">or</span> to test two conditions.
+        <br/>
+        Usually double-pipe, <span class="b">||</span>, is the symbol for <span class="b">or</span>. It goes between the
+        two conditions to be tested.
+        <br/>
+        If x is true or y is true, then the whole statement is true. But if both are false, the whole statement is false. For example:
+        <br/>
+        If x is 25 and y is 50, x < 30 || y < 30 is true. If we change x to 45, then the statement is false, as x (45) is not less than 30 and
+        y (50) is also not less than 30.
+      </p>
+      <p>
+        Drag values to 'x' and 'y' that makes the whole statement true.
+      </p>
+      <div class="cond">
+        <div id="x4" class="xDrop">x</div>
+        <div class="compare">&gt; 50 || (or)</div>
+        <div id="y4" class="yDrop">y</div>
+        <div class="compare">&lt; 0</div>
+      </div>
+      <div class="choices">
+        <div class="xChoice x4Choice">60</div>
+        <div class="xChoice x4Choice">-5</div>
+        <div class="xChoice x4Choice">0</div>
+        <div class="xChoice x4Choice">33</div>
+        <div class="xChoice x4Choice">17</div>
+        <div class="xChoice x4Choice">5</div>
+      </div>
+      <div class="condResult"></div>
+    </div>
+    <div id="ex5" class="noDisplay">
+      <h2>Conclusion</h2>
+      <div>
+        Congrats! You've learned the basics about how to make computers make choices. The different conditional options can be used
+        in combination to make more complex choices.
+      </div>
+      <div>
+        <p>Save Conditionals Lesson Progress</p>
+        <button type="button" id="save">Save</button>
+      </div>
     </div>
     <div class="nextExercise noDisplay">
       <button type="button" class="nextExerciseB">Next Exercise</button>

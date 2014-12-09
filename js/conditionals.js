@@ -38,13 +38,10 @@ jQuery(document).ready(function ($) {
   $("#x3, #y3").on("drop", function (event, ui) {
     var compareInt = 0;
     if (this.id === "x3") {
-      console.log("x dropped");
       droppedXVal = parseInt(ui.draggable.text());
     } else if (this.id === "y3") {
-      console.log("y dropped");
       droppedYVal = parseInt(ui.draggable.text());
     }
-    console.log("x = " + droppedXVal + " and y = " + droppedYVal);
     if (droppedXVal !== 1000 && droppedYVal !== 1000) {
       $(".condResult").html("<p>Is " + droppedXVal + " < " + droppedYVal + " && " +
         droppedYVal + " < " + compareInt + "?</p>" +
@@ -58,10 +55,35 @@ jQuery(document).ready(function ($) {
     $(".condResult").html("");
   });
 
+  $("#x4, #y4").droppable({ scope: "cond4" });
+  $(".x4Choice").draggable({ scope: "cond4", containment: $("#condExercises") });
+  var droppedXVal = -1000,
+      droppedYVal = 1000;
+  $("#x4, #y4").on("drop", function (event, ui) {
+    var compareXInt = 50,
+        compareYInt = 0;
+    if (this.id === "x4") {
+      droppedXVal = parseInt(ui.draggable.text());
+    } else if (this.id === "y4") {
+      droppedYVal = parseInt(ui.draggable.text());
+    }
+    if (droppedXVal !== -1000 && droppedYVal !== 1000) {
+      $(".condResult").html("<p>Is " + droppedXVal + " > " + compareXInt + " || " +
+        droppedYVal + " < " + compareYInt + "?</p>" +
+        (droppedXVal > compareXInt && droppedYVal < compareYInt).toString()).show();
+      if (droppedXVal > compareXInt && droppedYVal < compareYInt) {
+        $(".nextExercise").show();
+      }
+    }
+  });
+  $("#x4, #y4").on("dropout", function (event, ui) {
+    $(".condResult").html("");
+  });
+
   $(".nextExerciseB").on("click", function (event) {
     var current = parseInt(sessionStorage.getItem("exercise")),
         next = current + 1;
-    if (next > 1 && next < 4) {
+    if (next > 1 && next <= 5) {
       $("#ex" + current.toString()).fadeOut(function () {
         $("#ex" + next.toString()).fadeIn();
       });
