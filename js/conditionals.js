@@ -57,8 +57,8 @@ jQuery(document).ready(function ($) {
 
   $("#x4, #y4").droppable({ scope: "cond4" });
   $(".x4Choice").draggable({ scope: "cond4", containment: $("#condExercises") });
-  var droppedXVal = -1000,
-      droppedYVal = 1000;
+  droppedXVal = -1000;
+  droppedYVal = 1000;
   $("#x4, #y4").on("drop", function (event, ui) {
     var compareXInt = 50,
         compareYInt = 0;
@@ -67,7 +67,6 @@ jQuery(document).ready(function ($) {
     } else if (this.id === "y4") {
       droppedYVal = parseInt(ui.draggable.text());
     }
-    console.log("x = " + droppedXVal + " and y = " + droppedYVal);
     if (droppedXVal !== -1000 && droppedYVal !== 1000) {
       $(".condResult").html("<p>Is " + droppedXVal + " > " + compareXInt + " || " +
         droppedYVal + " < " + compareYInt + "?</p>" +
