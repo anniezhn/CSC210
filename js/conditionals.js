@@ -38,11 +38,14 @@ jQuery(document).ready(function ($) {
         droppedXVal = 1000,
         droppedYVal = 1000;
     if (this.id === "x3") {
+      console.log("x dropped");
       droppedXVal = parseInt(ui.draggable.text());
     } else if (this.id === "y3") {
+      console.log("y dropped");
       droppedYVal = parseInt(ui.draggable.text());
     }
     if (droppedXVal !== 1000 && droppedYVal !== 1000) {
+      console.log("x = " + droppedXVal " and y = " + droppedYVal);
       $(".condResult").html("<p>Is " + droppedXVal + " < " + droppedYVal + " && " +
         droppedYVal + " < " + compareInt + "?</p>" +
         (droppedXVal < droppedYVal && droppedYVal < compareInt).toString()).show();
