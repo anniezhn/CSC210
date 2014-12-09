@@ -1,7 +1,5 @@
 jQuery(document).ready(function ($) {
   sessionStorage.setItem("exercise", "1");
-  var droppedXVal = 1000,
-      droppedYVal = 1000;
 
   $("#x1").droppable({ scope: "cond1" });
   $(".x1Choice").draggable({ scope: "cond1", containment: $("#condExercises") });
@@ -33,20 +31,22 @@ jQuery(document).ready(function ($) {
     $(".condResult").html("");
   });
 
+  var droppedX3Val = 1000,
+      droppedY3Val = 1000;
   $("#x3, #y3").droppable({ scope: "cond3" });
   $(".x3Choice").draggable({ scope: "cond3", containment: $("#condExercises") });
   $("#x3, #y3").on("drop", function (event, ui) {
     var compareInt = 0;
     if (this.id === "x3") {
-      droppedXVal = parseInt(ui.draggable.text());
+      droppedX3Val = parseInt(ui.draggable.text());
     } else if (this.id === "y3") {
-      droppedYVal = parseInt(ui.draggable.text());
+      droppedY3Val = parseInt(ui.draggable.text());
     }
-    if (droppedXVal !== 1000 && droppedYVal !== 1000) {
-      $(".condResult").html("<p>Is " + droppedXVal + " < " + droppedYVal + " && " +
-        droppedYVal + " < " + compareInt + "?</p>" +
-        (droppedXVal < droppedYVal && droppedYVal < compareInt).toString()).show();
-      if (droppedXVal < droppedYVal && droppedYVal < compareInt) {
+    if (droppedX3Val !== 1000 && droppedY3Val !== 1000) {
+      $(".condResult").html("<p>Is " + droppedX3Val + " < " + droppedY3Val + " && " +
+        droppedY3Val + " < " + compareInt + "?</p>" +
+        (droppedX3Val < droppedY3Val && droppedY3Val < compareInt).toString()).show();
+      if (droppedX3Val < droppedY3Val && droppedY3Val < compareInt) {
         $(".nextExercise").show();
       }
     }
@@ -57,24 +57,24 @@ jQuery(document).ready(function ($) {
 
   $("#x4, #y4").droppable({ scope: "cond4" });
   $(".x4Choice").draggable({ scope: "cond4", containment: $("#condExercises") });
-  droppedXVal = -1000;
-  droppedYVal = 1000;
-  console.log("x = " + droppedXVal + " y = " + droppedYVal);
+  var droppedX4Val = -1000,
+      droppedY4Val = 1000;
+  console.log("x = " + droppedX4Val + " y = " + droppedY4Val);
   $("#x4, #y4").on("drop", function (event, ui) {
     var compareXInt = 50,
         compareYInt = 0;
     if (this.id === "x4") {
-      droppedXVal = parseInt(ui.draggable.text());
+      droppedX4Val = parseInt(ui.draggable.text());
     } else if (this.id === "y4") {
-      droppedYVal = parseInt(ui.draggable.text());
-      console.log("y dropped = " + droppedYVal);
+      droppedY4Val = parseInt(ui.draggable.text());
+      console.log("y dropped = " + droppedY4Val);
     }
-    console.log("x = " + droppedXVal + " y = " + droppedYVal);
+    console.log("x = " + droppedX4Val + " y = " + droppedY4Val);
     if (droppedXVal !== -1000 && droppedYVal !== 1000) {
-      $(".condResult").html("<p>Is " + droppedXVal + " > " + compareXInt + " || " +
-        droppedYVal + " < " + compareYInt + "?</p>" +
-        (droppedXVal > compareXInt || droppedYVal < compareYInt).toString()).show();
-      if (droppedXVal > compareXInt || droppedYVal < compareYInt) {
+      $(".condResult").html("<p>Is " + droppedX4Val + " > " + compareXInt + " || " +
+        droppedY4Val + " < " + compareYInt + "?</p>" +
+        (droppedX4Val > compareXInt || droppedY4Val < compareYInt).toString()).show();
+      if (droppedX4Val > compareXInt || droppedY4Val < compareYInt) {
         $(".nextExercise").show();
       }
     }
