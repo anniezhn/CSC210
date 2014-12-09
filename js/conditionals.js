@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
       console.log("y dropped = " + droppedY4Val);
     }
     console.log("x = " + droppedX4Val + " y = " + droppedY4Val);
-    if (droppedXVal !== -1000 && droppedYVal !== 1000) {
+    if (droppedX4Val !== -1000 && droppedY4Val !== 1000) {
       $(".condResult").html("<p>Is " + droppedX4Val + " > " + compareXInt + " || " +
         droppedY4Val + " < " + compareYInt + "?</p>" +
         (droppedX4Val > compareXInt || droppedY4Val < compareYInt).toString()).show();
