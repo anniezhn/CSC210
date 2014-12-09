@@ -14,10 +14,10 @@ jQuery(document).ready(function ($) {
 		$("#output").html("<p>" + txt + "</p>");
 		$(".nextExercise").show();
 		});
-		*/
+		
 		
 	// Show the next exercise
-(".nextExerciseB").on("click", function (event) {
+(".nextExerciseB").on("click", function(event) {
     var current = parseInt(sessionStorage.getItem("exercise")),
         next = current + 1;
     if (next > 1 && next <= 3) {
@@ -29,5 +29,6 @@ jQuery(document).ready(function ($) {
       $(".condResult").html("").hide();
     }
   });
+  */
   
 });
