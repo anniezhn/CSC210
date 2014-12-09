@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
     });
 
 	// runs the second exercise, printing to screen
-	$("#runProgram").submit(function(event) {
+	$("#runProgram").submit(function() {
 		var txt = $("#print").val();
 		$("#output").html("<p>" + txt + "</p>");
 		$(".nextExercise").show();
