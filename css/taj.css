@@ -168,7 +168,7 @@ input[type='submit'] {
 #condExercises {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 30em;
   margin: 0 auto;
   border: 1px solid #000;
 }
@@ -188,13 +188,13 @@ input[type='submit'] {
   clear: both;
 }
 
-.xDrop, .compare {
+.xDrop, .yDrop, .compare {
   height: 4em;
   float: left;
   line-height: 4em;
 }
 
-.xDrop {
+.xDrop, .yDrop {
   width: 4em;
   border: 1px solid #000;
   text-align: center;
@@ -214,7 +214,7 @@ input[type='submit'] {
 .condResult {
   clear: both;
   position: relative;
-  top: 7em;
+  top: 9em;
   margin-top: 1em;
 }
 

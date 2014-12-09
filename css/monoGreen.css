@@ -4,11 +4,11 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.nav, .defTab, .definition, #condExercises, #x1 {
+.nav, .defTab, .definition, #condExercises, .xDrop, .yDrop {
   border-color: #0f0;
 }
 
-.x1Choice, #effect {
+.xChoice, #effect {
   background-color: #0f0;
   color: #000;
 }
