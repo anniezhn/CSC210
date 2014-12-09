@@ -67,6 +67,7 @@ jQuery(document).ready(function ($) {
       droppedXVal = parseInt(ui.draggable.text());
     } else if (this.id === "y4") {
       droppedYVal = parseInt(ui.draggable.text());
+      console.log("y dropped = " + droppedYVal);
     }
     console.log("x = " + droppedXVal + " y = " + droppedYVal);
     if (droppedXVal !== -1000 && droppedYVal !== 1000) {
