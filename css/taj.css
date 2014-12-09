@@ -212,7 +212,6 @@ input[type='submit'] {
 }
 
 .condResult {
-  clear: both;
   position: absolute;
   bottom: 1em;
 }
@@ -260,6 +259,10 @@ input[type='submit'] {
 /* other handy styles */
 .noDisplay {
   display: none;
+}
+
+.clearFix {
+  clear: both;
 }
 
 #question{
