@@ -1,3 +1,4 @@
+<script src="js/iteration.js"></script>
 <div id="iterationProse">
   <p>
     When you're programming, there are times when you want to give a certain command to the computer more than one time. Maybe you want to print out the value of each element of an array -- remember that an array has a list of items -- or, if you're writing some code to do graphics, maybe you want to tell something on
@@ -36,16 +37,32 @@ This says that while the statement isn't true, the computer should perform the a
 
 <p>Look closely at this loop. We start the loop by making i equal to 1, and we're only going to stop when i isn't less than 11. So this will print out the numbers from 1 to 10 because the computer will first print i, then increase the value of i by 1, and then print out i if the new value is still less than 11. The loop will stop itself once it sees that i is less than 11. Otherwise, we would just print out numbers forever!</p>
 
-<p>Iteration is a little tricky to get used to, but can be very useful. You can practice on the examples below!</p>
+<p>Iteration is a little tricky to get used to, but can be very useful. You can practice on the example below!</p>
+<br /> <br />
 </div>
-<div id="iterationExercises">
-  <div id="iteration1" class="noDisplay">
-
+<div class="Exercises" id="iterationExercises">
+  <p><i>Experiment with putting different integers in the blanks to see what happens when you run the program!</i> We'll help you out if your values are a bit off at first.</p>
+  <div id="startfield" class="field">
+    <label for="start">for i = </label>
+    <input type=text name="start" id="start" placeholder="Starting value of i">
   </div>
-  <div id="iteration2" class="noDisplay">
-
+  <div id="endfield" class="field">
+    <label for="end">i < </label>
+    <input type=text name="end" id="end" placeholder="Loop until i is this value.">
   </div>
-  <div id="iteration3" class="noDisplay">
-
+  <div id="jumpfield" class="field">
+    <label for="jump">i += </label>
+    <input type=text name="jump" id="jump" placeholder="Each time, increase i by this value.">
+  </div>
+  <div id="printfield" class="field">
+    <label for="print">Print: </label>
+    <input type=text name="print" id="print" placeholder="What do you want to get written?">
+  </div>
+  <div class="runProgram">
+    <form name="runProgram" id="runProgram" method="get">
+      <input name="run" type="submit" id="run" value="Run the program!">
+    </form>
+  </div>
+  <div id="programOutput">
   </div>
 </div>
