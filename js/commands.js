@@ -8,13 +8,13 @@ jQuery(document).ready(function ($) {
       $(".nextExercise").show();
     });
 
-	// runs the second exercise, printing to screen
+	/*// runs the second exercise, printing to screen
 	$("#runProgram").submit(function() {
 		var txt = $("#print").val();
 		$("#output").html("<p>" + txt + "</p>");
 		$(".nextExercise").show();
 		});
-		
+		*/
 		
 	// Show the next exercise
 (".nextExerciseB").on("click", function (event) {
