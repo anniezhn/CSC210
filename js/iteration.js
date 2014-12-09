@@ -25,7 +25,7 @@ $(document).ready(function() {
            	else //we're good, actually print the results
            	{
            		for(var i = start; i < end; i += increment)
-           			result += "<p>" + toPrint + "</p>";
+           			result += "<p><pre>" + toPrint + "                 i is currently " + i + " </pre></p>";
            		$("#programOutput").html(result);
            	}
 	    }
