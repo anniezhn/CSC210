@@ -31,9 +31,9 @@ jQuery(document).ready(function ($) {
     $(".condResult").html("");
   });
 
-  $("#x3 #y3").droppable({ scope: "cond3" });
+  $("#x3, #y3").droppable({ scope: "cond3" });
   $(".x3Choice").draggable({ scope: "cond3", containment: $("#condExercises") });
-  $("#x3 #y3").on("drop", function (event, ui) {
+  $("#x3, #y3").on("drop", function (event, ui) {
     var compareInt = 0,
         droppedXVal = 1000,
         droppedYVal = 1000;
