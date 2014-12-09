@@ -35,8 +35,8 @@ jQuery(document).ready(function ($) {
   $(".x3Choice").draggable({ scope: "cond3", containment: $("#condExercises") });
   $("#x3, #y3").on("drop", function (event, ui) {
     var compareInt = 0,
-        droppedXVal = 1000,
-        droppedYVal = 1000;
+        droppedXVal,
+        droppedYVal;
     if (this.id === "x3") {
       console.log("x dropped");
       droppedXVal = parseInt(ui.draggable.text());
@@ -45,7 +45,7 @@ jQuery(document).ready(function ($) {
       droppedYVal = parseInt(ui.draggable.text());
     }
     console.log("x = " + droppedXVal + " and y = " + droppedYVal);
-    if (droppedXVal !== 1000 && droppedYVal !== 1000) {
+    if (droppedXVal && droppedYVal) {
       $(".condResult").html("<p>Is " + droppedXVal + " < " + droppedYVal + " && " +
         droppedYVal + " < " + compareInt + "?</p>" +
         (droppedXVal < droppedYVal && droppedYVal < compareInt).toString()).show();
