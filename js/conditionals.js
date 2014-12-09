@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
     } else if (this.id === "y3") {
       droppedYVal = parseInt(ui.draggable.text());
     }
-    if (droppedXVal !== 1000 and droppedYVal !== 1000) {
+    if (droppedXVal !== 1000 && droppedYVal !== 1000) {
       $(".condResult").html("<p>Is " + droppedXVal + " < " droppedYVal + " && " +
         droppedYVal + " < " + compareInt + "?</p>" +
         (droppedXVal < droppedYVal && droppedYVal < compareInt).toString()).show();
