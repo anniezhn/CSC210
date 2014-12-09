@@ -67,6 +67,7 @@ jQuery(document).ready(function ($) {
     } else if (this.id === "y4") {
       droppedYVal = parseInt(ui.draggable.text());
     }
+    console.log("x = " + droppedXVal + " and y = " + droppedYVal);
     if (droppedXVal !== -1000 && droppedYVal !== 1000) {
       $(".condResult").html("<p>Is " + droppedXVal + " > " + compareXInt + " || " +
         droppedYVal + " < " + compareYInt + "?</p>" +

@@ -216,6 +216,10 @@ input[type='submit'] {
   bottom: 1em;
 }
 
+.nextExercise {
+  clear: both;
+}
+
 /* Commands */
 #comm1, #comm2, #comm3 {
 	position: relative;
