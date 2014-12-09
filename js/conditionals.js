@@ -54,7 +54,7 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-  $("#x3 #y3").on("dropout", function (event, ui) {
+  $("#x3, #y3").on("dropout", function (event, ui) {
     $(".condResult").html("");
   });
 
