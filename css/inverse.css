@@ -4,11 +4,11 @@ body {
   font-family: Arial, Verdana, Sans-Serif;
 }
 
-.nav, .defTab, .definition, #condExercises, #x1 {
+.nav, .defTab, .definition, #condExercises, .xDrop, .yDrop {
   border-color: #fff;
 }
 
-.x1Choice, #effect {
+.xChoice, #effect {
   background-color: #fff;
   color: #000;
 }
