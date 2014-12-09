@@ -217,6 +217,7 @@ input[type='submit'] {
 }
 
 .nextExercise {
+  float: none;
   clear: both;
 }
 
@@ -262,6 +263,7 @@ input[type='submit'] {
 }
 
 .clearFix {
+  float: none;
   clear: both;
 }
 
