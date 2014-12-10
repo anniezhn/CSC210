@@ -5,7 +5,7 @@ $(document).ready(function() {
 	    var val1 = $("#start").val();
 	    var val2 = $("#end").val();
 	    var val3 = $("#jump").val();
-	    var toPrint = $("#print").val();
+	    var toPrint = $("#print").val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
 	    var start = parseInt(val1, 10);
 	    var end = parseInt(val2, 10);
 	    var increment = parseInt(val3, 10);
@@ -18,9 +18,9 @@ $(document).ready(function() {
 	    if (val1 == start && val2 == end && val3 == increment)
 	    {
            	//$("#programOutput").html(result);
-           	if (val2 - val1 > 100) //kid wants to see what infinity looks like. Let's not
+           	if ((end - start)/increment > 100) //kid wants to see what infinity looks like. Let's not
            		$("#programOutput").html("<p>...Let's NOT explode the page by printing more than 100 times.</p>");
-           	else if (val2 - val1 < 1) //won't print in this case
+           	else if (end - start < 1) //won't print in this case
            		$("#programOutput").html("<p>Check your first two values and think about the conditional you're producing.</p><p>Do you see why nothing will print?</p>");
            	else //we're good, actually print the results
            	{
